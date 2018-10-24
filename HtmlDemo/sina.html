@@ -157,7 +157,23 @@
         <!--</div>-->
     <!--</div>-->
 
+<div id="234" style="width: 100px;height: 300px;background-color: #c9e143;align-content: center">
+    <button style="width: 90px;height: 45px;" id="value1">切换1</button>
+    <button style="width: 90px;height: 45px;" id="value2">切换2</button>
+    <p id="2345">123</p>
+</div>
 
+<script type="text/javascript">
+    var pStr = document.getElementById("2345");
+    pStr.innerHTML = "123456";
+    document.getElementById("value1").onclick = function (ev) {
+        pStr.innerHTML = this.innerHTML
+    }
+    document.getElementById("value2").onclick = function (ev) {
+        pStr.innerHTML = this.innerHTML
+    }
+
+</script>
 
 </body>
 </html>
