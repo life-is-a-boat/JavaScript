@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择水果</title>
+    <style type="text/css">
+        select{
+            width: 150px;
+            /*height: 300px;*/
+            font-size: 16px;
+            background-color: greenyellow;
+        }
+    </style>
+
+</head>
+<body>
+    <select multiple id="sel1" size="10">
+        <!--<option value="" id="value1">苹果</option>-->
+        <!--<option value="" id="value2">鸭梨</option>-->
+        <!--<option value="" id="value3">香蕉</option>-->
+        <!--<option value="" id="value4">荔枝</option>-->
+
+        <option value="1">1苹果</option>
+        <option value="2">2鸭梨</option>
+        <option value="3">3香蕉</option>
+        <option value="4">4荔枝</option>
+    </select>
+    <input type="button" value=">>>">
+    <input type="button" value="<<<">
+    <input type="button" value=">">
+    <input type="button" value="<">
+<select multiple id="sel2" size="10">
+
+</select>
+    <script type="text/javascript">
+
+        var jsonStr = '[{"mUnreadNum":"0","message":"","type":"chat","name":"admin","time":"下午16:29","uuid":"admin"}]';
+
+        jsonObj=JSON.parse(jsonStr);
+
+        var selec1 = document.getElementById('sel1');
+            var selec2 = document.getElementById('sel2');
+            var buttonArr = document.getElementsByTagName("input");
+
+            buttonArr[0].onclick = function () {
+                fn1(selec1,selec2);
+            }
+            buttonArr[1].onclick = function () {
+                fn1(selec2,selec1);
+            };
+
+            buttonArr[2].onclick = function () {
+                fn2(selec1,selec2);
+            }
+            buttonArr[3].onclick = function () {
+                fn2(selec2,selec1);
+            }
+
+        function fn1(selec1,selec2){
+            var options = selec1.children;
+            for (var i = options.length -1; i >= 0; i--) {
+                options[0].selected = false;
+                selec2.appendChild(options[0]);
+            }
+            fn3(selec2);
+        }
+            function fn2(selec1,selec2) {
+                var options = selec1.children;
+                for (var i = options.length - 1; i >= 0; i--) {
+                    if (options[i].selected == true){
+                        options[i].selected = false;
+                        selec2.appendChild(options[i]);
+                    }
+                }
+                fn3(selec2);
+            }
+
+            function fn3(selec) {
+                var aaa = Array.from(selec.children).sort(function (a, b) {
+                    return a.value-b.value;
+                });
+                for (var i = 0; i < selec.children.length; i++) {
+                    selec.removeChild(selec.children[i]);
+                }
+                for (var i = 0; i < aaa.length; i++) {
+                    selec.appendChild(aaa[i]);
+                }
+            }
+    </script>
+
+</body>
+</html>

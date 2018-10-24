@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量声明提升</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        //变量声明提升 原因：预解析
+        /**
+         * 预解析
+         * js的解析器 在页面加载的时候 首先检查语法错误 把变量声明提升起来
+         * 1.查看语法错误
+         * 2.变量声明提升和函数整体提升（变量声明提升只提升变量名不提升变量值）
+         *
+         * 在ES6之前，JavaScript没有块级作用域(一对花括号{}即为一个块级作用域)，
+         * 只有全局作用域和函数作用域。
+         * 变量提升即将变量声明提升到它所在作用域的最开始的部分。
+         *
+         * 变量提升，全局作用域范围内，此时只是声明，并没有赋值
+         * 参考：https://www.cnblogs.com/kawask/p/6225317.html
+         * */
+        // fn();
+        // var aaa = 1;
+        // function fn() {
+        //     console.log(aaa);
+        //     console.log(typeof aaa);
+        //     var aaa = 2;
+        // }
+        //
+        //
+        // var global; // 变量提升，全局作用域范围内，此时只是声明，并没有赋值
+        // console.log(global); // undefined
+        // global = 'global'; // 此时才赋值
+        // console.log(global); // 打印出global
+        //
+        // function fn () {
+        //     var a; // 变量提升，函数作用域范围内
+        //     console.log(a);
+        //     a = 'aaa';
+        //     console.log(a);
+        // }
+        // fn();
+
+        //获取天数
+        function isRN(year) {
+            if (year%4 === 0 && year % 100 !== 0 || year%400 === 0){
+                console.log("闰年");
+                return true;
+            }
+            else {
+                console.log("不是闰年");
+                return false;
+            }
+        }
+        function getDays(year,month,day) {
+            var months = [31,28,31,30,31,30,31,31,30,31,30,31];
+            var days = 0;
+            for (var i = 0;i < month-1;i++){
+                days+=months[i];
+            }
+            days += day;
+            if (isRN(year)&&month>2){
+                days+=1;
+            }
+            return days;
+        }
+        console.log(getDays(2018,5,29));
+        // var myDate = new Date();
+        // console.log(typeof(myDate.year));
+        // console.log(getDays(parseInt(myDate.year.value),parseInt(myDate.month.value+1),parseInt(myDate.day.value)));
+
+
+
+    </script>
+</body>
+</html>

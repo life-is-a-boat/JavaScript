@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+</head>
+<body>
+    <script>
+        window.onclick = function (){
+            location.href = 'https://www.baidu.com';
+            // window.open('https://www.baidu.com','_blank');
+        }
+
+        console.log(location.href);
+        console.log(location.hash);
+        console.log(location.host);
+        console.log(location.hostname);
+        console.log(location.pathname);
+        console.log(location.protocol);
+        console.log(location.search);
+
+        window.ondblclick = function (){
+            location.reload();
+        }
+
+        location.replace('https://www.sina.com.cn');
+
+        location.assign('https://www.baidu.com');
+
+
+
+        console.log(navigator.userAgent);
+        console.log(navigator.platform);
+        // 34Navigator.html?_ijt=28akhkd7slipb3jlcmtoubd3ao:10
+        // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko)
+        // Chrome/67.0.3396.99 Safari/537.36
+        // 16:58:02.076 34Navigator.html?_ijt=28akhkd7slipb3jlcmtoubd3ao:11
+        // MacIntel
+
+        //回退
+        history.go(-1);
+        history.back();
+
+
+    </script>
+
+</body>
+</html>

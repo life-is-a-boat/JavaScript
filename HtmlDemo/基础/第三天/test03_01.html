@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 学习</title>
+
+    <style type="text/css">
+        p{
+            color: rgba(250,0,250,0.3);
+            background-image: url("../../img/images/background_small.jpg");
+            background-repeat: no-repeat;
+            /*background-size: 50% 50%;*/
+            text-decoration: none;
+            line-height: 200%;
+        }
+    </style>
+
+    <style>
+
+        #t1{
+            width: 80%;
+            background-color: white;
+            align-content: center;
+        }
+        td.width{
+            width: 25%;
+            text-align: center;
+        }
+        td.top{
+            width: 25%;
+            text-align: center;
+            border-bottom-color: darkgray;
+            border-bottom-width: 50px;
+        }
+        td.t1{
+            background-color: lightgray;
+            text-align: center;
+        }
+        td.t2{
+            background-color: white;
+            text-align: center;
+        }
+        div.arrow{
+            width: 0px;
+            border-top-width: 20px;
+            border-top-color: red;
+            border-top-style: solid;
+
+            border-right-width: 20px;
+            border-right-color: white;
+            border-right-style: solid;
+
+            border-left-width: 20px;
+            border-left-color: white;
+            border-left-style: solid;
+        }
+    </style>
+    <style>
+        table.collapse{
+            border-collapse: collapse;
+            width: 90%;
+        }
+        tr.odd{
+            background-color: #f8f8f8;
+        }
+        tr.head{
+            border-bottom-width: 2px;
+        }
+        tr.new{
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: lightgray;
+            height: 35px;
+        }
+        td.new{
+            width: 25%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p>icon</p>
+    <p>上划线</p>
+    <br/>
+
+    <p>美人尖</p>
+    <div class="arrow"></div>
+    <br/>
+    <div id="t1">
+        <table width="100%" style="border-collapse: collapse">
+            <tr>
+                <td class="width">id</td>
+                <td class="width">名称</td>
+                <td class="width">血量</td>
+                <td class="width">伤害</td>
+            </tr>
+            <tr style="border-collapse: collapse">
+                <td class="t1">1</td>
+                <td class="t1">gareen</td>
+                <td class="t1">340</td>
+                <td class="t1">58</td>
+            </tr>
+            <tr>
+                <td class="t2">2</td>
+                <td class="t2">teemo</td>
+                <td class="t2">320</td>
+                <td class="t2">76</td>
+            </tr>
+            <tr>
+                <td class="t1">3</td>
+                <td class="t1">annie</td>
+                <td class="t1">380</td>
+                <td class="t1">38</td>
+            </tr>
+            <tr>
+                <td class="t2">4</td>
+                <td class="t2">deadbrother</td>
+                <td class="t2">400</td>
+                <td class="t2">90</td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+
+    <table class="collapse">
+        <tr class="head">
+            <td class="width">id</td>
+            <td class="width">名称</td>
+            <td class="width">血量</td>
+            <td class="width">伤害</td>
+        </tr>
+        <tr class="new">
+            <td class="t1">1</td>
+            <td class="t1">gareen</td>
+            <td class="t1">340</td>
+            <td class="t1">58</td>
+        </tr>
+        <tr class="new">
+            <td class="t2">2</td>
+            <td class="t2">teemo</td>
+            <td class="t2">320</td>
+            <td class="t2">76</td>
+        </tr>
+        <tr class="new">
+            <td class="t1">3</td>
+            <td class="t1">annie</td>
+            <td class="t1">380</td>
+            <td class="t1">38</td>
+        </tr>
+        <tr class="new">
+            <td class="t2">4</td>
+            <td class="t2">deadbrother</td>
+            <td class="t2">400</td>
+            <td class="t2">90</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本框禁用</title>
+
+    <style type="text/css">
+        label{
+            font-size: 12px;
+            font-family: Helvetica,'宋体';
+            color: lightgray;
+            position: absolute;
+        }
+        input{
+            padding: 0 3px 0px;
+            margin: 0;
+            outline: 0px;
+        }
+        #jd{
+            top: 77px;
+            left: 61px;
+        }
+        #tmall{
+            top: 122px;
+            left: 61px;
+        }
+        #input1{
+            height: 24px;
+        }
+        #input2{
+            height: 24px;
+        }
+        .show{
+            display: block;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    账号：<input type="text" value="" placeholder="输入手机号"> <button>禁用</button><button>解禁</button>
+    <br/>
+    密码：<input type="password" value="" placeholder="输入密码">
+
+    <br/>
+    <br/>
+
+    京东：<label id="jd" class="show">我是京东</label><input id="input1" type="text" value="">
+    <br/>
+    <br/>
+    淘宝：<label id="tmall" for="input2" class="show">我是淘宝</label><input id="input2" type="text" value=""><br/>
+
+    <script type="text/javascript">
+
+        var input0 = document.getElementsByTagName("input")[0];
+        var button1 = document.getElementsByTagName("button")[0];
+        var button2 = document.getElementsByTagName("button")[1];
+
+        button1.onclick = function () {
+            input0.disabled = "true";
+        };
+
+        button2.onclick = function () {
+            // input0.readOnly = 0;
+            input0.removeAttribute("disabled");
+        };
+
+        var input1 = document.getElementById("input1");
+        var input2 = document.getElementById("input2");
+        var jd = document.getElementById("jd");
+        var tmall = document.getElementById("tmall");
+
+        input1.onfocus = function () {
+            console.log("获取焦点事件");
+            if (this.value === "")
+                jd.className = "hidden";
+        };
+        input1.onblur = function () {
+            console.log("失去焦点事件");
+            if (this.value === "")
+                jd.className = "show";
+        };
+
+        input2.onfocus = function () {
+            console.log("获取焦点事件");
+            if (this.value === "")
+                tmall.className = "hidden";
+        };
+        input2.onblur = function () {
+            console.log("失去焦点事件");
+            if (this.value === "")
+                tmall.className = "show";
+        };
+
+        input2.oninput = function () {
+            console.log(this.value);
+        };
+    </script>
+
+</body>
+</html>

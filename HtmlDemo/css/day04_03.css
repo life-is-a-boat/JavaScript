@@ -1,0 +1,76 @@
+div.yidong{
+    margin:auto;
+    width: 700px;
+    height: 600px;
+    padding: 20px;
+    border: dashed 1px red;
+}
+div.background{
+    width: 610px;
+    height: 480px;
+    border: 2px solid lightblue;
+}
+.pt_ziti{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.red{
+    color: red;
+}
+span.biaoti{
+    display: block;
+    background-color: lightblue;
+    font-size: 15px;
+    font-weight: bold;
+    color: steelblue;
+    margin: 2px;
+}
+a.lj_ziti{
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+table.a{
+    width: 100%;
+    border-bottom:2px solid lightcyan;
+    margin: 1px;
+    padding: 1px;
+}
+td{
+    height: 70px;
+    padding: 6px;
+    margin: 2px;
+}
+td.one{
+    width: 20%;
+}
+td.two{
+    width:20%;
+}
+td.thr{
+    width:60%;
+    /*background-color: lightgray;*/
+}
+td.background{
+    background-color: whitesmoke;
+    width: 330px;
+}
+input{
+    width: 120px;
+    background-color: ghostwhite;
+    color: lightgray;
+}
+div.position{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    background-image: url(http://how2j.cn/study/wangwang.gif);
+    /*background-attachment: scroll;*/
+    /*background-repeat: no-repeat;*/
+    background-position: -83px -0px;
+}
+img.clip{
+    display: block;
+    position: absolute;
+    left: -83px;
+    clip:rect(0px,108px,25px,83px);
+}

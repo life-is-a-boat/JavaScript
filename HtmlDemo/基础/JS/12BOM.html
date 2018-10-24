@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+    <style type="text/css">
+        #box{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            cursor: pointer;
+        }
+        #box1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body>
+//行内绑定
+<div id="box" onclick="onClickFN()"></div>
+
+    <script type="text/javascript">
+
+        /**
+         * JS 以事件驱动为核心的一门语言
+         * 事件的三要素
+         *      事件源
+         *      事件类型
+         *      驱动程序 ----匿名函数
+         *
+         * */
+        /**
+         * 获取事件源的方式 5种
+         *
+         * */
+        //获取事件源
+        var div1 = document.getElementById("box");
+        var arr1 = document.getElementsByClassName("class");
+        var arr3 = document.getElementsByTagName("div");
+        // var arr2 = document.getElementsByName("");
+        // var arr4 = document.getElementsByTagNameNS("");
+        /**
+         * 绑定事件
+         * 1.函数绑定
+         * 2.匿名绑定
+         * 3.
+         * */
+        //匿名绑定
+        div1.onclick = function (ev) {
+            console.log("click");
+            div1.id = "box1";
+        };
+
+        function onClickFN() {
+            console.log("onClickFN");
+        }
+        /**
+         *
+         * BOM  Brower Objects Model
+         * 浏览器对象模型
+         *
+         * */
+        /**
+         * onload
+         * 页面（文本+图片）加载完毕之后 调用
+         *
+         * js和HTML是同步加载的 （如果使用元素在定义元素之间 容易报错）
+         * 整个页面上所有元素加载完毕再执行JS内容
+         */
+
+        window.onload = function (ev) {
+            console.log("页面加载完毕");
+        };
+    </script>
+
+</body>
+</html>

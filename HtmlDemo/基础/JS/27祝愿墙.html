@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>祝愿墙</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            margin: 0 auto;
+            padding: 0;
+            font-size: 12px;
+            background: url("../../img/wishWall/bg.gif") center;
+            text-align: center;
+        }
+        #content{
+            margin: 0 auto;
+            width: 960px;
+            height: 627px;
+            background: url("../../img/wishWall/content_bg.jpg") no-repeat;
+            position: relative;
+        }
+        .content-model{
+            left: 100px;
+            top: 100px;
+            width: 227px;
+            height: 175px;
+            position: absolute;
+        }
+        .content-h{
+            margin: 0 auto;
+            width: 227px;
+            height: 23px;
+            background: url("../../img/wishWall/tip1_h.gif") no-repeat;
+            padding-top: 45px;
+            text-align: left;
+            cursor: move;
+        }
+        .num{
+            float: left;
+            width: 195px;
+            padding-left: 7px;
+        }
+        .content-c{
+            margin: 0 auto;
+            width: 200px;
+            text-align: left;
+            padding-left: 12px;
+            padding-right: 15px;
+            min-height: 40px;
+            max-height: 160px;
+            line-height: 20px;
+            background: url("../../img/wishWall/tip1_c.gif") repeat-y;
+            overflow: hidden;
+        }
+
+        .content-f{
+            width: 227px;
+            height: 73px;
+            padding-top: 20px;
+            background: url("../../img/wishWall/tip1_f.gif") no-repeat;
+        }
+        .icon{
+            width: 35px;
+            height: 35px;
+            padding-left: 15px;
+            float: left;
+            text-align: center;
+        }
+        .name{
+            float: right;
+            padding-right: 15px;
+            font-size: 14px;
+            line-height: 35px;
+            text-align: right;
+            color: #c0f;
+        }
+        .clear{
+            clear: both;
+            overflow: auto;
+            display: block;
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <!--<div class="content-model" id="tip">-->
+            <!--<div class="content-h" title="双击关闭">-->
+                <!--<div class="num">第[49568]条 2016-07-7 22:51:52</div>-->
+                <!--<div class="close" title="关闭纸条">x</div>-->
+                <!--<div class="clear"></div>-->
+            <!--</div>-->
+            <!--<div class="content-c">-->
+                <!--普天同庆，天下大同！-->
+            <!--</div>-->
+            <!--<div class="content-f">-->
+                <!--<div class="icon">-->
+                    <!--<img src="../../img/wishWall/bpic_1.gif">-->
+                <!--</div>-->
+                <!--<div class="name">不愿意透露姓名的吕先生</div>-->
+                <!--<div class="clear"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    </div>
+    <script>
+        //需求：克隆盒子，然后随机位置，点击纸条的时候压住其他的纸条。
+        //思路：获取纸条，克隆，随机数值绑定到纸条上，添加到父盒子中，然后绑定事件层级最高。
+        //步骤：
+        //1.获取纸条，克隆
+        //2.随机数值绑定到纸条上
+        //3.添加到父盒子中
+        //4.然后绑定事件层级最高
+
+        var messages = [
+            {"id":1,"name":"mahu","content":"今天你拿苹果支付了么","time":"2016-02-17 00:00:00"},
+            {"id":2,"name":"haha","content":"今天天气不错，风和日丽的","time":"2016-02-18 12:40:00"},
+            {"id":3,"name":"jjjj","content":"常要说的事儿是乐生于苦","time":"2016-03-18 12:40:00"},
+            {"id":4,"name":"9.8的妹纸","content":"把朋友家厕所拉堵了 不敢出去 掏了半小时了都","time":"2016-03-18 12:40:00"},
+            {"id":5,"name":"雷锋ii.","content":"元宵节快乐","time":"2016-02-22 12:40:00"},
+            {"id":6,"name":"哎呦哥哥.","content":"据说今晚央视的元宵晚会导演和春晚导演是同一个人，真是躲得过初一，躲不过十五。","time":"2016-02-22 01:30:00"},
+            {"id":7,"name":"没猴哥，不春晚","content":"班主任:“小明，你都十二岁了，还是三年级，不觉得羞愧吗”？。小明:“一点也不觉得，老师你都四十多岁了，不也是年年在三年级混日子吗？羞愧的应该是你”。老师:……","time":"2016-02-22 01:30:00"},
+            {"id":8,"name":"哎呦杰杰.","content":"真搞不懂你们地球人，月亮有什么好看的，全是坑，还是对面那哥们好看，","time":"2016-02-22 01:30:00"},
+            {"id":9,"name":"哎呦哎呦","content":"今天哪里的烟花最好看！！？答：朋友圈。。。","time":"2016-02-22 02:30:00"}
+        ];
+
+
+        //0.创建多张纸条
+        var content = document.getElementById('content');
+
+        for (var i = 0; i < messages.length; i++) {
+            var div = document.createElement('div');
+            div.className = 'content-model';
+            var topValue = parseInt(Math.random()*400);
+            var leftValue = parseInt(Math.random()*700);
+            div.style.left = leftValue +'px';
+            div.style.top = topValue +'px';
+            div.innerHTML += '<div class="content-h" title="双击关闭">' +
+                                    '<div class="num">第['+(49568+i)+']条 '
+                                        +messages[i].time
+                                    +'</div>'
+                                    +'<div class="close" title="关闭纸条">x</div>'
+                                    +'<div class="clear"></div>'
+                            +'</div>'
+                            +'<div class="content-c">'+messages[i].content+'</div>'
+                            +'<div class="content-f">'
+                                +'<div class="icon"><img src="../../img/wishWall/bpic_1.gif"></div>'
+                                +'<div class="name">'+messages[i].name+'</div>'
+                                +'<div class="clear"></div>'
+                            +'</div>';
+            div.onclick = fn;
+            content.appendChild(div);
+
+            var closeDiv = div.getElementsByClassName('close')[0];
+            closeDiv.onclick = function () {
+                content.removeChild(this.parentNode.parentNode);
+            }
+
+            var dbDiv = div.getElementsByClassName('content-h')[0];
+            dbDiv.ondblclick = function () {
+                content.removeChild(this.parentNode);
+            }
+
+            // var contentModel = document.getElementById('tip');
+            // var newContent = contentModel.cloneNode(true);
+            // newContent.id = newContent.id + 1;
+            // var topValue = parseInt(Math.random()*400);
+            // var leftValue = parseInt(Math.random()*400);
+            // newContent.style.left = leftValue +'px';
+            // newContent.style.top = topValue +'px';
+            // var content_h = newContent.getElementsByClassName("content-h");
+            // var content_c = newContent.getElementsByClassName("content-c");
+            // content_c.innerHTML = messages[i].content;
+            // content.appendChild(newContent);
+            // newContent.onclick = fn;
+
+        }
+
+        var index = 1;
+        function fn() {
+            // this.parentNode.removeChild(this);
+            this.style.zIndex = index;
+            index++;
+        }
+
+    </script>
+</body>
+</html>

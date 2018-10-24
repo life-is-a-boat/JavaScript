@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+    <script>
+        function p(s) {
+            document.write("<br>");
+            document.write(s);
+        }
+        p("窗口的宽度和高度："+window.innerWidth+"、"+window.innerHeight);
+        p("外部窗口的宽度和高度："+window.outerWidth+"、"+window.outerHeight);
+        function openNewWindow() {
+           mywindow = window.open("http://www.baidu.com");
+        }
+    </script>
+</head>
+
+<body>
+    <div style="padding: 15px;width: 90%;height: 80%;background-color: cyan;border: 1px solid yellow">
+        <button onclick="openNewWindow()">打开新窗口</button>
+        <script>
+            p("浏览器产品名称："+navigator.appName);
+            p("浏览器版本号："+navigator.appVersion);
+            p("浏览器内部代码："+navigator.appCodeName);
+            p("操作系统："+navigator.platform);
+            p("是否启用Cookies:"+navigator.cookieEnabled);
+            p("浏览器的用户代理报头："+navigator.userAgent);
+        </script>
+        <script>
+                function showAlert(s) {
+                    alert(s);
+                }
+                function showConfirm(s) {
+                    var d = confirm(s);
+                    showAlert(typeof d + " " + d);
+                }
+                function showPrompt(s) {
+                    var d = prompt(s);
+                    showAlert(typeof d + " " + d);
+                }
+                function showTimeout(s) {
+                    var date = new Date();
+                    var timeString = date.getFullYear()+"/"+(date.getMonth()+1)+"/"+date.getDate();
+
+                    setTimeout(showAlert(timeString),s.value);
+                }
+                function p(s) {
+                    document.write("<br/>");
+                    document.write(s);
+                }
+                function showTimeInterval() {
+                    var date = new Date();
+                    var year = date.getFullYear();
+                    var month = date.getMonth()+1;
+                    var day = date.getDate();
+                    var hour = date.getHours();
+                    var minute = date.getMinutes();
+                    var second = date.getSeconds();
+                    p(year+"/"+month+"/"+day+" "+hour+":"+minute+":"+second);
+                }
+//                showAlert("提示框");
+//                showConfirm("你是帅哥么？");
+//                showPrompt("请输入你的名字");
+//                setInterval(showTimeInterval,1000);
+        </script>
+        <br/>
+        <button onclick="showTimeout(3)">点击后3秒后显示当前时间，并且只显示一次</button>
+        <br/>
+        <button onclick="showTimeInterval()">不停的重复执行</button>
+    </div>
+</body>
+</html>

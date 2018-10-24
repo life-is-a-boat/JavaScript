@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+    <script type="text/javascript">
+        /**
+         * JS加载的时候，只加载函数名，不加载函数体。
+         * 所以如果想使用内部的成员变量，需要调用函数。
+         * */
+            function founcation1(num) {
+                alert(num);
+            }
+
+            founcation1(1);
+
+            //隐式全局变量 这里注意逗号 和 分号(分号相当于换行)的区别
+            function foucation2() {
+                // console.log(a);
+                // var a=b=c=1;//b、c 为隐式全局变量
+                var a=1; b=2; c=1;//b c为隐式全局变量
+                // var a=1,b=2,c=1;
+            }
+            foucation2();
+            console.log(b);
+
+        /**
+         * 匿名函数
+         *
+         * */
+        // (function f() {
+        //     console.log(1);
+        // })
+
+        //调用方法1 直接调用
+        (function f() {
+            console.log(1);
+        })();
+
+        //调用方法2 绑定事件
+        document.onlick = (function () {
+            alert(1);
+        })
+
+        //调用方法3 定时器
+        // setInterval((function () {
+        //     console.log(333);
+        // }),10);
+        /**
+         * 函数 也是一种数据类型 归根结底 还是一种 object
+         * */
+
+
+        //递归
+        // 1+2+...+n
+        function recursion(n) {
+            if (n<0){
+                return 0;
+            }
+            return n + recursion(n-1);
+        }
+        console.log("1+2+...+n="+recursion(100));
+
+        //1！+ 2！+ ... + n!
+        function factorial(n) {
+            if (n===1){
+                return 1;
+            }
+            return n * factorial(n-1);
+        }
+        console.log("1！+ 2！+ ... + n!="+factorial(3));
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

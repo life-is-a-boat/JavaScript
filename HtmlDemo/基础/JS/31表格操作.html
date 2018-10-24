@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格操作</title>
+    <style type="text/css">
+        td{
+            width: 100px;
+            height: 45px;
+            background-color: #009900;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var tab = document.getElementsByTagName('table')[0];
+        var row1 = tab.insertRow();//添加一行
+
+        var td=row1.insertCell();//添加列
+
+        td.innerHTML='<input type="text" id="a"/>'//向列里面添加标签
+
+        td.innerHTML='123';    //将值显示到添加的标签中
+        // console.log(row1);
+        // console.log(tab.rows);
+
+        var cel1 = tab.rows[0];
+        console.log(cel1);
+        var td2 = cel1.insertCell();
+        td2.innerHTML = '<span>2</span>';
+
+        var cel = tab.children[0].children[0].cells;
+        console.log(cel);
+
+        var row2 = tab.rows[1].cells[0];
+        row2.innerText = '20';
+        console.log(row2);
+    </script>
+
+</body>
+</html>

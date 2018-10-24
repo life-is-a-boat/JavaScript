@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+
+
+    <style>
+        /*元素选择器*/
+        p{
+            color: red;
+        }
+        /*id选择器*/
+        #p1{
+            color: blue;
+        }
+        /*类选择器*/
+        .p2{
+            color: green;
+        }
+        /*更准确的选择*/
+        p.black{
+            color: black;
+        }
+
+        p#percentage{
+            width: 50%;
+            height: 50%;
+            background-color: pink;
+        }
+        p#pix{
+            width: 180px;
+            height: 50px;
+            background-color: green;
+        }
+/*注：
+    .和#的区别
+    .是class 属性
+    #是id 属性
+ */
+    </style>
+
+    <style>
+        p.gray{
+            background-color: gray;
+        }
+        h1{
+            background-color: transparent;
+        }
+        h2{
+            background-color: rgb(250,0,255);
+        }
+        h3{
+            background-color: #00ff00;
+        }
+    </style>
+    <!--图片做背景-->
+    <style>
+        div#test{
+            background-image: url("../../img/images/background.jpg");
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+
+    <!--背景重复-->
+    <style>
+        /*
+        background-repeat
+                repeat
+                no-repeat
+                repeat-x
+                repeat-y
+        */
+        /*
+            background-size
+                auto
+                contain
+                cover
+                length
+                percentage
+        */
+        div#norepeat{
+            background-image: url("../../img/images/background_small.jpg");
+            width: 200px;
+            height: 100px;
+            background-repeat: no-repeat;
+        }
+        div#repeatXY{
+            background-image: url("../../img/images/background_small.jpg");
+            width: 200px;
+            height: 100px;
+            background-repeat:repeat;
+        }
+        div#repeatX{
+            background-image: url("../../img/images/background_small.jpg");
+            width: 200px;
+            height: 100px;
+            background-repeat: repeat-x;
+        }
+        div#repeatY{
+            background-image: url("../../img/images/background_small.jpg");
+            width: 200px;
+            height: 100px;
+            background-repeat: repeat-y;
+        }
+        div#contain{
+            background-image: url("../../img/images/background_small.jpg");
+            width: 200px;
+            height: 100px;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <p>这是一个P(元素选择器)</p>
+    <p id="p1">这是一个P(id选择器)</p>
+    <p class="p2">这是一个P(类选择器)</p>
+    <p class="black">这是一个P(类选择器)</p>
+    <p id="percentage">按比例设置尺寸50%宽 50%高</p>
+    <p id="pix">按像素设置尺寸180px宽 50px高</p>
+    <p class="gray">灰色</p>
+    <h1>透明背景，默认即透明背景</h1>
+    <h2>紫色</h2>
+    <h3>绿色背景</h3>
+    <br/>
+    <div id="test">这是一个有背景图的DIV</div><br/>
+    <div id="norepeat">背景不重复</div><br/>
+    <div id="repeatX">背景水平重复</div><br/>
+    <div id="repeatY">背景垂直重复</div><br/>
+    <div id="repeatXY">背景重复</div><br/>
+    <div id="contain">背景平铺</div><br/>
+</body>
+</html>

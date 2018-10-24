@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>体育</title>
+    <style type="text/css">
+        div,ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            height: 40px;
+            width: 600px;
+            background-color: #eee;
+            margin: 10px auto;
+            /*border-top: 3px solid orange;*/
+        }
+        ul,li{
+            list-style: none;
+        }
+        .nav ul li{
+            float: left;
+        }
+        .nav ul li a{
+            height: 40px;
+            font: 14px/40px "Microsoft Himalaya";
+            /*margin: 0 20px;*/
+            display: inline-block;
+            padding: 0 20px;
+            text-decoration: none;
+        }
+        .nav ul li a:hover{
+            background-color: #aaa;
+            color: #fff;
+        }
+
+        .main,.header,.footer,.content,.content-left,.content-right,.content-top,.content-bottom,.content-center{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            width: 300px;
+            height: 500px;
+            background: #aaa;
+            border: 1px solid #cecece;
+            margin: 0 auto;
+        }
+        .content{
+            /*width: 300px;*/
+            /*height: 300px;*/
+            /*float: left;*/
+        }
+        .content-center{
+            width: 100px;
+            height: 300px;
+            float: left;
+        }
+        .header,.footer{
+            width: 300px;
+        }
+        .footer{
+            height: 100px;
+            background-color: blue;
+        }
+        .header{
+            height: 100px;
+            background-color: red;
+        }
+        .content-left,.content-right{
+            width: 100px;
+            height: 300px;
+        }
+        .content-right{
+            background-color: yellow;
+            float: right;
+        }
+        .content-left{
+            background-color: orange;
+            float: left;
+        }
+        .content-top{
+            width: 100px;
+            height: 200px;
+            background-color: #fff;
+            /*float: left;*/
+        }
+        .content-bottom{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /*float: left;*/
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a href="#">百度</a></li>
+        <li><a href="#">百度一下</a></li>
+        <li><a href="#">百度百科全书</a></li>
+    </ul>
+</div>
+<div class="main">
+    <div class="header"></div>
+    <div class="content">
+        <div class="content-left"></div>
+        <div class="content-center">
+            <div class="content-top"></div>
+            <div class="content-bottom"></div>
+        </div>
+        <div class="content-right"></div>
+    </div>
+    <!--<div style="clear:both;"></div>-->
+    <div class="footer"></div>
+</div>
+
+</body>
+</html>

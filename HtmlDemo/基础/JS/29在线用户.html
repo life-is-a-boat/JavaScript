@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在线用户</title>
+    <style type="text/css">
+        *{
+            /*padding: 0;*/
+            /*margin: 0;*/
+            word-wrap: break-word;
+        }
+        .wp{
+            width: 730px;
+            margin: 0 auto;
+        }
+        .mtn{
+            margin-top: 5px;
+        }
+        .title{
+            height: 32px;
+            padding: 0 10px;
+            line-height: 32px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #fff;
+        }
+        .frame-title{
+            background-color: #A90000;
+        }
+        .xfs{
+            margin: 10px;
+        }
+        .xfs img{
+            width: 48px;
+            height: 48px;
+            display: block;
+            margin: 0 auto;
+        }
+        .xfs p{
+            margin-top: 5px;
+        }
+        ul{
+
+        }
+        li{
+            font-size: 10px;
+            float: left;
+            padding: 0 0px 5px;
+            list-style-type: none;
+            text-align: center;
+            width: 66px;
+            height: 85px;
+            overflow: hidden;
+        }
+        a{
+            color: #333;
+            text-decoration: none;
+            font: 12px/1.5 Tahoma,'Microsoft Yahei','Simsun';
+        }
+        a img{
+            border: none;
+        }
+        a p{
+            display: block;
+            width: 100%;
+            height: 20px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .block{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="wp mtn">
+    <div class="area">
+        <div class="title frame-title">
+            <span>当前在线用户</span>
+        </div>
+        <div class="xfs" id="users">
+            <ul>
+                <!--<li>-->
+                    <!--<a href="#" target="_blank"><img src="../../img/wishWall/noavatar_small.gif" alt="图像"></a>-->
+                    <!--<a href="#" target="_blank"><p>沉眠楚人</p></a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var users = [
+        {"name": "tdxy01","icon":"noavatar_small.gif"},
+        {"name": "沉眠楚人","icon":"noavatar_small.gif"},
+        {"name": "爱上karina","icon":"75_avatar_small.jpg"},
+        {"name": "tdxy01","icon":"89_avatar_small.jpg"},
+        {"name": "today","icon":"noavatar_small.gif"},
+        {"name": "hlg","icon":"noavatar_small.gif"},
+        {"name": "itcast","icon":"noavatar_small.gif"},
+        {"name": "heima","icon":"noavatar_small.gif"},
+        {"name": "nima","icon":"noavatar_small.gif"},
+        {"name": "gege","icon":"noavatar_small.gif"},
+        {"name": "nimei","icon":"noavatar_small.gif"},
+        {"name": "goodman","icon":"noavatar_small.gif"},
+        {"name": "haoren","icon":"noavatar_small.gif"},
+        {"name": "yuanxiaojie","icon":"noavatar_small.gif"},
+        {"name": "zhengyue","icon":"noavatar_small.gif"},
+        {"name": "qishi","icon":"noavatar_small.gif"},
+        {"name": "qqtang","icon":"noavatar_small.gif"},
+        {"name": "wawawa","icon":"noavatar_small.gif"},
+        {"name": "haha","icon":"noavatar_small.gif"},
+        {"name": "robot","icon":"noavatar_small.gif"},
+        {"name": "XFlute","icon":"noavatar_small.gif"},
+        {"name": "lovmilan","icon":"noavatar_small.gif"},
+        {"name": "johnny670","icon":"noavatar_small.gif"},
+        {"name": "xiaobinbin02","icon":"noavatar_small.gif"},
+        {"name": "axxxxx","icon":"noavatar_small.gif"}
+    ];
+
+    var div = document.getElementById('users');
+    var ul = div.firstElementChild||div.firstChild;
+    for (var i = 0; i < users.length; i++) {
+        ul.innerHTML+='<li>'
+            +'<a href="#" target="_blank">'+'<img src="../../img/wishWall/'+users[i].icon+'" width="48" height="48">'+'</a>'
+            +'<a href="#" target="_blank">'+'<p>'+users[i].name+'</p>'+'</a>'
+            +'</li>'
+    }
+</script>
+
+</body>
+</html>

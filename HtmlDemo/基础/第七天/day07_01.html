@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+
+    <div id="d1" align="center" class="abc">hello HTML DOM d1</div>
+    <div id="d2" align="center" class="abc">hello HTML DOM d2</div>
+    <br/>
+    <div>
+        <button onclick="changeDiv1()">通过内容节点方式改变div的内容</button>
+        <button onclick="changeDiv2()">通过innerHTML改变div的内容</button>
+    </div>
+    <br/>
+    <div>
+        <div id="d3"> 输入的内容</div>
+        <input type="text" name="input1" class="class1 class2" test="t1" placeholder="请输入验证码"> <input type="submit" id="checkout1" onclick="checkout()" value="验证">
+        <br/>
+        <!--<div id="div2">输入的是否为数字</div>-->
+        <!--<input type="text" name="input2" placeholder="请输入数字"> <input type="submit" onclick="checkoutInt()" value="验证" id="checkout2">-->
+    </div>
+    <!--<button type="button" id="checkout" name="checkout" onclick="checkout()">验证</button>-->
+    <script>
+        function print(s) {
+            document.write(s);
+            document.write("<br>")
+        }
+        function changeDiv1() {
+            var d2 = document.getElementById("d2");
+            var childNode = d2.childNodes[0];
+            childNode.nodeValue = "通过childNode[0].value 改变内容";
+        }
+        function changeDiv2() {
+            var  d2 = document.getElementById("d2");
+            d2.innerHTML = "通过innerHTML改变内容";
+        }
+        function checkout() {
+            var elements = document.getElementsByName("input1");
+            var child1 = elements.childNodes[0];
+            var d3 = document.getElementById("d3");
+//            var s = new String();
+            var s = "输入的值："+elements.name;
+//            for (i = 0;i<elements.length;i++) {
+//                var child = elements[i];
+//                s+="nodeName:"+child.nodeName+" "+"nodeValue:"+child.nodeValue + "/n";
+//            }
+            d3.innerHTML = s;//"输入的值：" + child1.nodeValue;
+//            window.alert(input1.value);
+        }
+//        function checkoutInt() {
+//            var input1 = document.getElementsByName("input2");
+//            var child1 = input1.attributes[0];
+//            var div2 = document.getElementById("div2");
+//            div2.innerHTML = "输入的是否为数字:";
+//        }
+//        var d1 = document.getElementById("d1");
+//        print("getElementById："+d1);
+
+
+        var array = new Array(1,4,2,3,5,6);
+        console.log(array.sort());
+        console.log(array.slice(0,3));
+
+        navigator.appName; //浏览器产品名称
+        navigator.appVersion; //浏览器版本号
+        navigator.appCodeName; //浏览器内部代码
+        navigator.platform; //操作系统
+        navigator.cookieEnabled; //是否启用Cookies
+        navigator.userAgent; //浏览器的用户代理报头
+
+        function getTime() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDay();
+            var hour = getSecondString(date.getHours());
+            var minute = getSecondString(date.getMinutes());
+            var second = getSecondString(date.getSeconds());
+
+            var timeString = year + "/" + month + "/" + day + " " + hour + ":" + minute + ":" + second;
+            console.log(timeString);
+            // document.write(timeString)
+        }
+        function getSecondString(str) {
+            if (str < 10) {
+                return "0" + str
+            }
+            return str
+        }
+
+        var timeInterval = setInterval(getTime,1000);
+        // getTime()
+    </script>
+</body>
+</html>

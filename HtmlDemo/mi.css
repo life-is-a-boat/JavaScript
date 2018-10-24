@@ -1,0 +1,61 @@
+
+.nav{
+    height: 80px;
+    background-color: #aaa;
+    text-align: center;
+}
+.nav1{
+    height: 44px;
+    background-color: lightgray;
+    border-top: 3px solid orange;
+    display: inline-block;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    border-collapse: collapse;
+}
+
+span{
+    align-content: center;
+    background-color: bisque;
+    width: 200px;
+    height: 20px;
+    display: inline-flex;
+    border-right: red solid 1px;
+    border-left: yellow solid 1px;
+}
+
+span:focus{
+    background: red;
+    /*padding: auto 0;*/
+    /*text-align: center;*/
+}
+.userName{
+    border-bottom: solid 1px red;
+}
+.userName:focus{
+    background-color: yellowgreen;
+}
+
+a{
+    text-decoration: none;
+}
+
+a.nav{
+    height: 80px;
+    width: 100px;
+    background-color: #336699;
+    display: inline-block;
+}
+
+a:hover{
+    background-color: white;
+    color: red;
+    text-decoration: underline;
+}
+
+/*a:visited{*/
+    /*color: gray;*/
+/*}*/

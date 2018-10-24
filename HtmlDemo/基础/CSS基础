@@ -1,0 +1,243 @@
+知识点：
+CSS 的三种选择器
+    元素选择器
+    id选择器
+    类选择器
+1.元素选择器
+    通过标签名选择元素 直接全局改变引用该标签的布局 如
+    定义语法
+    p {
+        color：red;
+    }
+    使用语法
+    <p>元素选择器使用的是标签名</p>
+    只要使用p 标签 所以的文字都设置成红色
+2.id选择器
+    一个元素的id应该是唯一的 如
+    定义语法
+    #p1{
+        color:blue;
+    }
+    使用语法
+    <p id="p1">id选择器</p>
+    注：定义时用的是 #
+3.类选择器
+    当需要多个元素 都使用同样的CSS的时候  就会使用类选择器
+    定义语法
+    .pre {
+        color:green;
+    }
+    使用语法
+    <p class="pre">类选择器</p>
+    注：定义时使用的是 .
+4.更准确的选择
+    同时根据元素名和class来选择
+    定义语法
+    p.blue{
+        color:blue;
+    }
+    使用语法
+    <p class="blue">元素名+class</p>
+    注：定义时使用的是 . 对应使用的时候是用class
+5.注释
+    以/* 开始
+    以*/结束
+    被注释掉的文字会自动隐藏
+    <style>
+    /*设置所有的p元素中的内容为红色*/
+    p{
+      color:red;
+    }
+    </style>
+
+    <p>红色的p</p>
+6.元素尺寸
+    属性：width
+    值：可以是百分比或者象素
+    <style>
+    p#percentage{
+      width:50%;
+      height:50%;
+      background-color:pink;
+    }
+    p#pix{
+      width:180px;
+      height:50px;
+      background-color:green;
+    }
+    </style>
+
+    <p id="percentage"> 按比例设置尺寸50%宽 50%高</p>
+
+    <p id="pix"> 按象素设置尺寸  180px宽 50 px高</p>
+     注：定义时使用的是 # 对应使用的时候是用id
+7.背景
+    关键字：
+    background-color：
+           颜色的值可以采用3种方式
+                     1. 预定义的颜色名字
+                     比如red,gray,white,black,pink，参考颜色速查手册
+                     2. rgb格式  还有一种rgba格式
+                     分别代表红绿蓝的比例 rgb(250,0,255) 即表示红色是满的，没有绿色，蓝色是满的，即红色和蓝色混合在一起：紫色
+                     3. 16进制的表示  #00ff00 等同于 rgb(0,255,0)
+    background-image：图片作为背景 url("url")
+    background-repeat：背景重复  默认repeat
+            值可以选
+            repeat; 水平垂直方向都重复
+            repeat-x; 只有水平方向重复
+            repeat-y; 只有垂直方向重复
+            no-repeat; 无重复
+    background-size；
+            值：
+            length:格式 value1 value2 第一个值设置宽度，第二个值设置高度。如果只设置一个值，则第二个值会被设置为 "auto"。像素值
+            percentage:同length 但value为百分比
+            cover:图片宽高等比例缩放，直到较小的宽或高填满父布局，可能出现图片溢出。
+            contain:图片宽高等比例缩放，直到宽或高填满父布局，有可能出现布局填充不完整
+8.文本
+    关键字有：
+        color：文本颜色 值同background-color
+        text-align:对齐  left、right、center
+        text-decoration：文本修饰
+                    overline        上划线
+                    underline       下划线
+                    line-through    删除效果
+                    blink           闪烁效果
+                    none            无效果
+
+        行间距：     line-height        数值或百分比
+        字符间距：   letter-spacing     数字
+        单词间距：   word-spacing       数字
+        首行缩进：   text-indent        数字
+        大小写：    text-transform      uppercase、capitalize、lowercase
+        空白格：    white-space         normal、pre、pre-wrap、nowrap
+9.字体
+    关键字有：
+        font-size：尺寸    数字或百分比
+        font-style：风格   normal、italic
+        font-weight：粗细  normal-bold
+        font-family：字库
+        font：
+10.鼠标样式
+        cursor:auto
+11.表格
+    表格布局：
+        table-layout:
+            automatic; 单元格的大小由td的内容宽度决定
+            fixed; 单元格的大小由td上设置的宽度决定
+            注：只对连续的英文字母起作用，如果使用中文就看不到效果
+    表格边框：
+        border-collapse:separate（边框分隔）、collapse（边框合并）
+12.边框
+    边框风格：border-style
+                solid: 实线
+                dotted:点状
+                dashed:虚线
+                double:双线
+    边框颜色：border-color
+    边框宽度：border-width
+    都放在一起：border   颜色 风格 宽度
+    只有一个方向有边框：
+                       border-top-style:solid;
+                       border-top-color:red;
+                       border-top-width: 50px;
+    有交界的边都有边框:当有交界的边同时出现边框的时候，就会以倾斜的形式表现交界线。
+    块级元素和内联元素的边框区别:
+                块级元素div默认是占用100%的宽度
+                常见的块级元素有div h1 p 等
+                而内联元素span的宽度由其内容的宽度决定
+                常见的内联元素有 a b strong i input 等
+13.内边距  元素里的内容与边框之间的距离
+        padding-left：左内边距
+        padding-right：右内边距
+        padding-top：上内边距
+        padding-bottom：下内边距
+        padding：上 右 下 左
+            如果缺少左内边距的值，则使用右内边距的值。
+            如果缺少下内边距的值，则使用上内边距的值。
+            如果缺少右内边距的值，则使用上内边距的值。
+14.外边距  元素边框和元素边框之间的距离
+    margin-left:左外边距
+    margin-right：
+    margin-top:
+    margin-bottom:
+
+
+15.如果style.css中，<style>标签中，style属性上有冲突的样式，那么谁的优先级更高？
+    1.优先使用： 最后出现的一个
+    2.如果样式上增加了!important，则优先级最高，甚至高于style属性
+16.绝对定位
+        position：absolute   通过指定left,top绝对定位一个元素
+        通过绝对定位可以把一个元素放在另一个元素上，这样位置就重复了。
+        z-index属性， 当z-index的值越大，就表示放上面，z-index:越小就表示放下面。
+17.相对位置
+        position：relative
+        相对定位不会把该元素从原文档删除掉，而是在原文档的位置的基础上，移动一定的距离
+18.浮动
+    1.浮动后，原来的“坑”就让出来了
+        并且是在原来的高度的基础上，向右浮动
+    2.当图片不浮动时，文字就会换行出现在下面
+        当图片浮动时，文字围绕着图片
+    3.不允许出现浮动元素
+      属性:clear
+      值: left right both none
+    4.默认的div排列是会换行的
+      如果使用float就可以达到水平排列的效果，通常会用在菜单，导航栏等地方
+      如果超出了父容器，还会有自动换行的效果
+19.显示方式
+    display：
+            none    隐藏      使得被选择的元素隐藏，并且不占用原来的位置
+            block   块级      块级元素会自动在前面和后面加上换行，并且在其上的width和height也能够生效
+            inline  内联      内联元素前后没有换行，并且在其上的width和height也无效。 其大小由其中的内容决定
+            inline-block 内联-块级   内联是不换行，但是不能指定大小   块级时能制定大小，但是会换行
+            list-item 显示为列表
+            table 显示为表格
+            inline-table 显示为前后无换行的表格
+            table-cell 显示为单元格
+20.水平居中
+      内容居中：align center   标签属性
+                text-align:center   CSS属性
+      元素居中：margin：0 auto
+      内联元素 不能设置宽度 所以不能直接通过设置 0 auto 来实现居中的效果
+21.左侧固定
+    overfloat:hidden
+    例：
+        左侧固定 右边自动填满  如不设置overflow 属性  将会覆盖上一个标签的区域
+22.垂直居中
+    line-height方式    适合单独一行垂直居中
+    内边距方式  padding 借助设置相同的上下内边距，实现垂直居中效果，可以用在多行文本上
+    table方式
+            首先通过display: table-cell;把div用单元格的形式显示，然后借用单元格的垂直居中vertical-align: middle; 来达到效果。
+            这样对图片也可以居中，上一步 line-height就不能对图片居中。
+23.左右固定
+    左右固定，中间自适应的布局
+24.贴在下方
+    首先把蓝色div设置为相对定位
+    然后把内部的绿色div设置为绝对定位， bottom: 0表示贴在下面
+25.块之间的空格
+    1、如果多个span连续编写 是不会有空格的  像<span>连续的span</span><span>连续的span</span>
+    2、真正开发代码的时候，一般不会连续书写span,而是不同的span之间有回车换行 像
+        <span>有换行的span</span>
+        <span>有换行的span</span>
+        <span>有换行的span</span>
+    而这样编写代码，就会导致<span>之间出现空格 可以使用float来解决。
+    float使用完毕之后，记得在下面加上 <div style="clear:both"></div> 用于使得后续的元素，不会和这些span重复在一起
+
+    注：div是块级元素，其默认宽度是100%，所以文本有对齐的空间前提。
+      但是，span却看不出右对齐效果，为什么呢？
+      因为span是内联元素其默认宽度就是其文本内容的宽度
+      简单说就是文本已经粑在其边框上了，对齐是看不出效果来的
+26.边框模型
+
+27.超链状态
+    伪类，所谓的伪类即被选中的元素处于某种状态的时候
+    超链状态有4种
+    link - 初始状态，从未被访问过
+    visited - 已访问过
+    hover - 鼠标悬停于超链的上方
+    active - 鼠标左键点击下去，但是尚未弹起的时候
+28.隐藏
+     使用display:none; 隐藏一个元素，这个元素将不再占有原空间 “坑” 让出来了
+     使用 visibility:hidden;隐藏一个元素，这个元素继续占有原空间，只是“看不见”
+30.优先级
+    1.优先使用： 最后出现的一个
+    2.如果样式上增加了!important，则优先级最高，甚至高于style属性

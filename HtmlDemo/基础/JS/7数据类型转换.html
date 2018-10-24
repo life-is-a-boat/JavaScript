@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型转换</title>
+    <script type="text/javascript">
+
+        //数值转字符串
+        var n1 = 123;
+        var n2 = n1.toString();//String(n1);
+        console.log(n2+":"+typeof(n2));
+
+        //字符串转数值
+        var n3 = "123";
+        var n4 = "123a";
+        var n5 = "a123";
+        var n6 = "-1.56";
+        var n7 = "4.56";
+        var temp = Number("123q");
+        console.log(temp+':'+typeof(temp));//NaN:number
+
+        /**
+         *  NaN  Number 类型
+         *  NaN 属性是代表非数字值的特殊值。该属性用于指示某个值不是数字。可以把 Number 对象设置为该值，来指示其不是数字值。
+         *  提示：请使用 isNaN() 全局函数来判断一个值是否是 NaN 值。
+         *  Number.NaN 是一个特殊值，说明某些算术运算（如求负数的平方根）的结果不是数字。
+         *  方法 parseInt() 和 parseFloat() 在不能解析指定的字符串时就返回这个值。
+         *  对于一些常规情况下返回有效数字的函数，也可以采用这种方法，用 Number.NaN 说明它的错误情况。
+         * */
+
+        // parseInt()
+        console.log(parseInt(n3));//123
+        console.log(parseInt(n4));//123  数字开头
+        console.log(parseInt(n5));//NaN  非数字开头
+        console.log(parseInt(n6));//-1   取整数部分
+        console.log(parseInt(n7));//4    向下取整
+        console.log(typeof(parseInt(n7))); //number
+
+        // parseFloat()
+        /**
+         * 整数数字类型的字符串，转换之后得到的整数数字。
+         * 数字开头的字符串，转换之后得到的是前边的数字。
+         * 非数字开头的字符串，转换之后得到的是NaN。
+         * 小数类型的字符串，转换之后得到的是原数字。
+         * */
+
+
+        // 布尔类型
+        var n8 = '0';
+        console.log(Boolean(n8));//true
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

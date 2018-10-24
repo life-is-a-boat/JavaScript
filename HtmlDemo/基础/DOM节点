@@ -1,0 +1,29 @@
+HTML DOM（Document Object Model 文档对象模型）
+
+1.节点概念
+DOM把所有的html都转换为节点
+整个文档 是一个节点
+元素 是节点  document.getElementbyId
+元素属性 是节点 attributes
+元素内容 是节点 childNodes
+注释 也是节点
+
+2.获取节点
+    document.getElementById
+        1.首先通过getElementById获取元素节点，然后通过元素节点的attributes获取其下所有的属性节点。
+        2.首先通过document.getElementById获取元素节点，然后通过childNodes获取其所有的子节点。
+          其中第一个子节点，就是其内容节点。然后借助nodeName和nodeValue把内容节点的名称和值打印出来。
+    document.getElementsByTagName  根据标签名称获取一个元素数组
+    document.getElementsByClassName 根据class返回一个节点数组
+    document.getElementsByName    通过表单元素的name获取元素节点  表单元素都有name属性，
+                                  通过getElementsByName可以根据name属性的值，获取元素节点。
+内容节点
+属性节点
+
+注：因为javascript是解释语言，是顺序执行的。 在执行到 document.getElementById的时候，
+    div标签还没有加载，所以无法获取。
+3.节点的属性
+    节点名称    nodeName
+    节点值      nodeValue
+    节点类型    nodeType
+    元素的文本内容 innerHTML

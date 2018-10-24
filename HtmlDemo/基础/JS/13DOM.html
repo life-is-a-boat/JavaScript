@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+    <div class="box3"></div>
+</div>
+    <script type="text/javascript">
+        /**
+         *  DOM Document Objects Model
+         *  文档对象模型
+         *  DOM 树
+         *
+         *  节点 Node
+         *  父节点  兄弟节点 子节点
+         *
+         *  节点 属性
+         *
+         *
+         * */
+
+        console.log(document);
+
+        var box2 = document.getElementsByClassName("box2")[0];
+        //父节点
+        console.log(box2.parentNode);
+        //兄弟节点
+        console.log(box2.nextElementSibling);
+
+        console.log(box2.parentNode.previousSibling);
+
+        console.log(box2.parentNode.childNodes);
+        console.log(box2.parentNode.children);
+
+
+
+
+    </script>
+
+</body>
+</html>

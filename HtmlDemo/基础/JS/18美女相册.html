@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美女相册</title>
+    <style type="text/css">
+        body{
+            font-family: "Helvetica","Arial",serif;
+            color: #333;
+            background-color: #ccc;
+            margin: 1em 10%;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            padding: 1em;
+            float: left;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+            background-color: transparent;
+            font-weight: 700;
+        }
+        #imageallery{
+            list-style: none;
+        }
+        #imageallery li{
+            margin: 0px 20px 20px 0px;
+            padding: 0;
+            display: inline;
+        }
+        #imageallery li a img{
+            width: 200px;
+            /*border: 0px;*/
+            border-radius: 15px 4px 15px 4px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<!--<div class="box">-->
+    <h2>美女画廊</h2>
+    <!--<div class="title">美女相册</div>-->
+    <a href="#">注册</a>
+    <ul id="imageallery">
+        <li><a href="../../img/jd/1.jpg" title="美女1"><img src="../../img/jd/1-small.jpg"  alt="美女1"></a></li>
+        <li><a href="../../img/jd/2.jpg" title="美女2"><img src="../../img/jd/2-small.jpg"  alt="美女2"></a></li>
+        <li><a href="../../img/jd/3.jpg" title="美女3"><img src="../../img/jd/3-small.jpg"  alt="美女3"></a></li>
+        <li><a href="../../img/jd/4.jpg" title="美女4"><img src="../../img/jd/4-small.jpg"  alt="美女4"></a></li>
+    </ul>
+    <div style="clear: both"></div>
+    <img id="image" src="../../img/jd/placeholder.png" alt="" width="450px">
+    <p id="des">选择一张图片</p>
+<!--</div>-->
+
+<script type="text/javascript">
+
+    var ul = document.getElementById("imageallery");
+    var aArr = ul.getElementsByTagName("a");
+    var img = document.getElementById("image");
+    var des = document.getElementById("des");
+    for (var i = 0; i< aArr.length; i ++){
+        aArr[i].onclick = function () {
+            img.src = this.href;
+            des.innerHTML = this.title;
+            return false;
+        }
+    }
+</script>
+</body>
+
+</html>

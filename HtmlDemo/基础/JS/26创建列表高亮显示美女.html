@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建列表高亮显示美女</title>
+    <script type="text/javascript" src="../../js/tools.js"></script>
+</head>
+<body>
+    <button type="button">创建列表</button>
+    <ul>
+
+    </ul>
+    <script type="text/javascript">
+        var button = document.getElementsByTagName("button")[0];
+        var arr = ["昭君出塞","西施浣纱","贵妃醉酒","貂蝉拜月"];
+        var ul = document.getElementsByTagName("ul")[0];
+        button.onclick = function () {
+            if (ul.children.length > 0) removeAllChildren(ul);
+
+            for (var i = 0; i < arr.length; i++) {
+                // 两种方式
+                // newLi.innerHTML += "<li>"+arr[i]+"</li>";
+
+                var newLi = document.createElement("li");
+                newLi.innerHTML = arr[i];
+                ul.appendChild(newLi);
+            }
+            var lis = ul.children;
+            for (var i = 0; i < lis.length; i++) {
+                var li = lis[i];
+                li.onblur = function () {
+                    this.style.backgroundColor = "";
+                }
+                li.onmouseover = function () {
+                    for (var j = 0; j < lis.length; j++) {
+                        lis[j].style.backgroundColor = "";
+                    }
+                    this.style.backgroundColor = "red";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

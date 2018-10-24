@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对位置</title>
+    <style>
+        span{
+            border-bottom: solid 2px lightgray;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <!--<div style="background-color: cornflowerblue;height: 400px"></div>-->
+    <!--<div style="background-color: lime">无论蓝色div高度如何变化，绿色div都会贴在下面</div>-->
+    <div style="height: 400px;background-color: brown;position: relative">
+        <div style="background-color: lime;bottom: 0;position: absolute;width: 100%">无论蓝色div高度如何变化，绿色div都会贴在下面</div>
+    </div>
+    <br/>
+    <!--<div style="float: left">-->
+        <span>有换行的span</span>
+        <span>有换行的span</span>
+        <span>有换行的span</span>
+    <!--</div>-->
+</body>
+</html>

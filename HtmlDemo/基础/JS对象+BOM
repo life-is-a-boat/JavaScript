@@ -1,0 +1,113 @@
+JavaScript 对象  有着属性和方法的一种特殊数据类型
+new Number()
+ 属性   MIN_VALUE  MAX_VALUE   NaN
+方法：
+    toFixed() 返回一个数字的小数表达
+    toExponential   返回科学计数法表示的数值
+    valueOf
+        方法 valueOf() 返回一个基本类型的数字
+        通过typeof 判断数据类型可以发现，一种是object,一种是number
+
+字符串
+    new String（）
+   方法：
+        charAt
+        charCodeAt
+
+        concat
+
+        indexOf
+        lastIndexOf
+
+        localeCompare
+            0 表示相等
+            1 表示字母顺序靠后
+            -1 表示字母顺序靠前
+
+        subString
+
+        split   根据分割字符 将字符串分为数组
+                注： 第二个参数可选，表示返回数组得长度
+
+        replace
+
+数组
+    new Array
+方法：
+    concat  连接数组
+    join    通过指定分隔符  返回一个数组的字符串表示
+    push pop 从数组最后的位置插入、获取（获取后删除）
+    unshift shift 从数组最前边的位置插入、获取数据（获取后删除）
+    sort    排序
+            sort() 为空时默认升序排列
+            sort(selector) 自定义排序算法
+    reverse 反转
+    slice   获取子数组
+    splice（index，del,num1,num2...）  删除 插入元素
+
+日期
+    Date 日期对象
+
+
+Math
+    函数
+    E PI  自然对数  圆周率
+    min  max
+    pow   abs  round  random
+
+自定义对象
+    new Object()
+    prototype为已经存在的对象 增加新的方法
+
+JavaScript 调试函数
+console.log()   只在控制台打印相关信息
+alert() 会阻断JavaScript程序的执行
+
+
+BOM (Brower Object Model) 浏览器对象模型
+Window 窗口
+    获取文档显示区域的高度和宽度     window.innerWidth  window.innerHeight
+    获取外部窗体的宽度和高度         window.outerWidth  window.outHeight
+    打开一个新的窗口                window.open("/")
+Navigator 浏览器
+        navigator.appName; //浏览器产品名称
+        navigator.appVersion; //浏览器版本号
+        navigator.appCodeName; //浏览器内部代码
+        navigator.platform; //操作系统
+        navigator.cookieEnabled; //是否启用Cookies
+        navigator.userAgent; //浏览器的用户代理报头
+Screen 客户端屏幕
+    用户的屏幕分辨率：screen.width screen.height
+    可用区域大小：screen.availWidth  screen.avaliHeight
+
+History    用于记录访问历史
+    history.back()
+    history.go(-1);
+
+Location   表示浏览器中的地址栏
+
+    // 刷新当前页面
+    location.reload()
+    //跳转到另一个页面
+    //方法1
+      //location="/";
+      //方法2
+      location.assign("/");
+
+    location.protocol   协议
+    location.hostname   主机名
+    location.port       端口号  默认80
+    location.host       主机加端口号
+    location.pathname   访问的路径
+    location.hash       锚点
+    location.search     参数列表
+弹出框
+    警告框 alert（）
+    确认框 confirm（）
+    提示框
+    输入框 prompt（）
+
+计时器
+    setTimeout(functionname,time) 通过setTimeout在指定的毫秒数时间后 执行一次 函数functionname
+    setInterval(函数名, 重复执行的时间间隔毫秒数 );
+    clearInterval(t) 终止一个不断重复的任务

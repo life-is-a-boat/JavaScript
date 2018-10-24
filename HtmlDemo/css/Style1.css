@@ -1,0 +1,22 @@
+body{
+    font-family: "宋体";
+    font-size: 13px;
+    color: #666666;
+    width: 643px;
+}
+
+div.topDiv{
+    border-bottom-style:solid;
+    border-bottom-color:silver;
+    border-bottom-width:1px;
+    padding-bottom:10px;
+    margin-bottom:15px;
+}
+
+span{
+    color: darkgray;
+}
+
+img{
+    background-color: red;
+}

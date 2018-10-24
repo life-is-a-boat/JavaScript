@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+<style>
+    div{
+        /*margin-left: 20px;*/
+        /*border-color: lightgray;*/
+        /*border-width: 1px;*/
+        /*border-style: solid;*/
+    }
+</style>
+    <style>
+        .left{
+            width:200px;
+            float:left;
+            background-color:pink
+        }
+        .right{
+            width:200px;
+            float:right;
+            background-color:pink
+        }
+        .center {margin:0 200px;   background-color:lightblue}
+    </style>
+</head>
+<body>
+<!--<div> 默认情况下div会占用100%的宽度,所以无法观察元素是否居中</div>-->
+
+<!--<div style="width:300px;margin:0 auto">-->
+    <!--设置本div的宽度，然后再使用样式 margin: 0 auto来使得元素居中</div>-->
+
+<!--<span style="width:300px;margin:0 auto">-->
+  <!--span 是内联元素，无法设置宽度，所以不能通过margin:0 auto居中</span>-->
+<!--<div style="text-align:center">-->
+    <!--<span>span的居中可以通过放置在div中，然后让div text-align实现居中</span>-->
+<!--</div>-->
+
+<!--<div style="border: solid 1px lightgray;float: left;">左边固定宽度</div>-->
+<!--<div style="background-color: pink;overflow: hidden">右边自动填满</div>-->
+
+    <div style="width: 200px;background-color: red;float: left">左边固定宽度</div>
+    <div style="width: 200px;background-color: lime;float: right;">右边固定宽度</div>
+    <div style="background-color:brown">中间自适应</div>
+    <br/>
+    <!--<div style="width: 200px;background-color: red;float: left">左边固定宽度</div>-->
+    <!--<div style="width: 200px;background-color: lime;float: right;">右边固定宽度</div>-->
+    <!--<div style="background-color:brown;margin: 0 200px">中间自适应</div>-->
+
+    <div class="left">左边固定宽度</div>
+    <div class="right">左边固定宽度</div>
+    <div class="center">中间自适应</div>
+</body>
+</html>

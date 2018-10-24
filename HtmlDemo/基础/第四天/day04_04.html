@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day04_04</title>
+    <link rel="stylesheet" type="text/css" href="../../css/day04_03.css">
+</head>
+<body>
+    <div class="yidong">
+        <span class="red pt_ziti">请注意：带有“*”的项目必须填写</span>
+        <div class="background">
+            <span class="biaoti">填写您的用户名：</span>
+            <table class="a">
+                <tr>
+                    <td class="one pt_ziti"><span class="red">*</span>通行证用户名：</td>
+                    <td class="two">
+                        <input type="text" placeholder="请输入用户名" style="background-color: ghostwhite;color: lightgray">
+                        <a href="#" class="lj_ziti">查看用户名是否被占用</a>
+                    </td>
+                    <td class="thr pt_ziti background">用户名由a~z的英文字母（不区分大小写）、0~9的数字、<b>点、减号</b>或<b>下划线</b>组成，长度为3~18个字符，只能以数字或者字母开头和结尾，例如：kyzy_001.</td>
+                </tr>
+            </table>
+            <span class="biaoti">请填写安全设置：<span style="font-size: small;font-weight: normal ">（安全设置用于验证帐号和找回密码）</span></span>
+            <span class="red pt_ziti">以下信息对保证您帐号的安全极为重要，请您务必认真填写.</span>
+            <table class="a">
+                <td class="one pt_ziti">
+                    <span class="red">*</span>输入登录密码：<br/>
+                    <span class="red">*</span>登录密码确认：
+                </td>
+                <td class="two">
+                    <input type="password" id="password"><br style="margin: 5px;"/>
+                    <input type="password" id="confirmPassword">
+                </td>
+                <td class="thr background pt_ziti">
+                    密码长度为6~16位，区分字母大小写，登录密码可以由字母、数字、特殊字符组成.【<a href="#" class="lj_ziti">更多说明</a>】
+                </td>
+            </table>
+            <table class="a">
+                <tr>
+                    <td class="one pt_ziti">
+                        <span class="red">*</span>密码提示问题：<br/>
+                        <span class="red">*</span>密码提示答案：
+                    </td>
+                    <td class="two">
+                        <input type="text" id="question"><br style="margin: 5px"/>
+                        <input type="text" id="answer">
+                    </td>
+                    <td class="thr background pt_ziti">
+                        当您忘记密码时可以由找回密码.例如，问题是“我的哥哥是谁”，答案为“peter2”.问题长度<b>不大于36</b>个字符，一个汉子占两个字符，答案长度在6~30位之间，区分大小写.【<a class="lj_ziti" href="#">更多说明</a>】
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 100%;margin: 1px;padding: 1px;border-bottom: solid 2px lightcyan">
+                <tr>
+                    <td class="one pt_ziti">
+                        <span class="red">*</span>输入安全码：<br/>
+                        <span class="red">*</span>安全码确认：
+                    </td>
+                    <td class="two">
+                        <input type="text" id="securiteCode"><br style="margin: 5px"/>
+                        <input type="text" id="confirmSecuriteCode">
+                    </td>
+                    <td class="thr background pt_ziti">
+                        安全码时您找回密码的重要途径，安全码长度为6~16位，区分字母大小写，由字母，数字特殊字符组成.<span class="red">特别提醒：安全码一旦设定，将不可自行修改.</span>【<a href="#" class="lj_ziti">更多说明</a>】                    </td>
+                </tr>
+            </table>
+            <div align="center">
+                <input style="margin: 10px;color: black" type="button" value="提 交 表 单">
+            </div>
+        </div>
+
+        <div class="position"></div><br/>
+        <!--<img src="http://how2j.cn/study/wangwang.gif" class="clip" style="align: center;">-->
+    </div>
+</body>
+</html>

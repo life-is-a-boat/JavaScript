@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .top-bannar{
+            background-color: pink;
+            height: 80px;
+        }
+        .w{
+            width: 1210px;
+            margin: 0px auto;
+            position: relative;
+        }
+        img{
+            width: 1210px;
+            height: 80px;
+            background-color: blue;
+        }
+        a{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 20px;
+            height: 20px;
+            text-decoration: none;
+            text-align: center;
+            background: #000;
+        }
+         .hidden{
+            display: none!important;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="top-bannar" id="topBannar">
+    <div class="w">
+        <img src="" alt="">
+        <a href="#" id="closeBannar">x</a>
+    </div>
+</div>
+
+
+    <script type="text/javascript">
+        var closeBannar = document.getElementById("closeBannar");
+        var topBannar = document.getElementById("topBannar");
+        closeBannar.onclick = function () {
+            console.log("1");
+            topBannar.className = "hidden";
+        }
+    </script>
+</body>
+</html>

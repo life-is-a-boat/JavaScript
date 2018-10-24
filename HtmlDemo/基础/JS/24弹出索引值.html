@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出索引值</title>
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+        ul li{
+            float: left;
+            width: 100px;
+        }
+        button{
+            border: 1px solid #ccc;
+            background-color: darkslategray;
+            color: #fff;
+        }
+        .current{
+            background-color: yellow;
+        }
+
+        .node_ul {
+            /*width: 200px;*/
+            height: 510px;
+        }
+        .node_ul li{
+            clear: both;
+            list-style: none;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 1px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var buttons = document.getElementsByTagName("button");
+
+            for (var i = 0; i < buttons.length; i++) {
+                // buttons[i].index = i;
+                buttons[i].setAttribute("index", i);
+                buttons[i].onmouseover = function () {
+                    this.className = 'current';
+                    console.log('索引值:'+this.index);
+                };
+                buttons[i].onmouseleave = function () {
+                    this.className = '';
+                    alert('索引值:'+this.index);
+                };
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+<ul>
+    <li>
+        <button>按钮1</button>
+    </li>
+    <li>
+        <button>按钮2</button>
+    </li>
+    <li>
+        <button>按钮3</button>
+    </li>
+    <li>
+        <button>按钮4</button>
+    </li>
+</ul>
+<div style="clear: both;"></div>
+<ul class="node_ul">
+    <li class="box1">1</li>
+    <li id="box2">2</li>
+    <li class="box3">3</li>
+    <li class="box4">4</li>
+    <li class="box5">5</li>
+</ul>
+    <script type="text/javascript">
+        var box2 = document.getElementById('box2');
+        console.log(box2.innerHTML);
+        console.log(box2.parentNode);
+        box2.parentNode.style.backgroundColor = 'blue';//父节点
+
+        //兄弟节点
+        box2.nextElementSibling.style.backgroundColor = 'red';
+        box2.previousElementSibling.style.backgroundColor = 'gray';
+
+        // box2.nextSibling.style.backgroundColor = 'red';
+        // box2.previousSibling.style.backgroundColor = 'gray';
+
+
+        //子节点
+        // box2.parentNode.childNodes
+        // box2.parentNode.children
+        // box2.parentNode.lastChild
+
+        // box2.parentNode.firstChild
+
+        // nodeType 元素节点  属性节点  文本节点
+
+        // nodeName
+
+        // nodeValue
+
+
+    </script>
+
+
+
+
+</body>
+</html>

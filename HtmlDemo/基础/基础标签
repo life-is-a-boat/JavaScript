@@ -1,0 +1,97 @@
+第一天学习HTML 还是比较心焦的  因为不清楚怎么来学习，因为每次都看这些基础的东西  没办法进行实践  所以想找一个系统的网站教程来学习。
+
+学习知识点：
+1.标题 自动粗体 大写其中的内容  并且带有换行效果
+    <h1>...<h5>
+2.段落 自带换行效果
+    <p>  paragraph的缩写
+3.粗体  实现粗体效果
+    <b> （bold） 仅仅表示该文本是粗体 并不暗示这段文字的重要性
+    <strong>   更多的是强调语义上的加重  提示用户该文本的重要性（在SEO（搜索引擎优化）的时候 也更加容易帮助用户找到重点的内容）
+4.斜体  实现斜体效果
+    <i>  (italic) 仅表示该文本是斜体的 并不暗示这段文字的重要性
+    <em> （Emphasized） 更多的是强调语义上的加重 提醒用户该文本的重要性  （常用于引入新的术语）
+5.预格式   常用于在网页上显示代码 公式等
+    <pre>
+6.删除效果
+    <del> (delete)453
+7.下划线
+    <ins>
+8.图像
+    <img src="url" alt="图片不显示的时候 替换文本" title="鼠标放在图片上时 提示文本">
+9.超链
+    <a href="url">
+10.表格
+    <table>：border
+    <caption>:表头
+    <tr>
+    <td>：align（left、center、right） valign(top、middle、bottom)  colspan rowspan
+11.列表
+    <ul><li>...</li></ul> 无序列表
+    type=”square”      小方块
+    Type=”disc”       实心小圆圈
+    Type=”circle”      空心小圆圈
+
+    <ol><li>...</li></ol> 有序列表
+
+    type=”a”      小方块
+    Type=”1”       实心小圆圈
+    Type=”i”      空心小圆圈
+
+    <dl><dt></dt><dd>...</dd></dl> 自定义列表
+12.块
+    <div> :自动换行
+    <span>：内联元素 不会换行
+13.字体
+    <font>
+14.内联框架
+    <iframe>
+15.文本框
+    <input type="text" value="初始值" placeholder="背景文字"> 只能输入一行
+    <textarea>   输入多行  cols  rows
+16.密码框
+    <input type="password"> 输入的数据会自动显示为星号
+17.表单
+    <form> 用于向服务器提交数据
+18.单选框
+    <input type="radio">  通过name分组
+19.复选框
+    <input type="checkbox">
+20.下拉列表
+    <select> size  multiple
+    需要配合<option>使用  selected
+21.文本域
+    input type="text"
+22.普通按钮
+    <input type="button">  不具备提交数据form
+23.提交按钮
+    <input type="submit">
+24.重置按钮
+    <input type="reset">
+25.图像按钮
+    <input type="image">
+26.按钮
+    <button></button>
+    IE下button的type的默认值为button不具备提交功能
+    其他浏览器type的默认值是submit
+27.锚点
+    标签中添加的id 方便超链接跳转 eg:
+    <div id="123"> </div>
+    <a href="#123">回到顶部</a>
+28.滚动标签
+    <marquee behavior="" direction="">滚动</marquee>
+超链接优化
+<base target="_blank"> 新界面打开
+
+
+<meta>标签
+<meta> 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎和更新频度的描述和关键词。
+<meta> 标签位于文档的头部，不包含任何内容。<meta> 标签的属性定义了与文档相关联的名称/值对。
+ charset="UTF-8"  字符编码
+ name= "keywords" content="关键字1,关键字2..."  提示搜索引擎搜索
+ name= "escription" content="一些页面描述性文字"
+ http-equiv="refresh" content="5,https://baidu.com" 页面的重定向 5秒刷新 进入百度
+
+<link>标签 链接外部样式表文件
+    <link rel="stylesheet" href="1.css">
+    <link rel="icon" href="icon.image"> icon图标

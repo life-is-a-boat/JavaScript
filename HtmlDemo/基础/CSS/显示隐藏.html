@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示隐藏</title>
+    <style type="text/css">
+        .box,.div1,.div2,.div3{
+            width: 300px;
+            height: 300px;
+        }
+        .box{
+            overflow: hidden;
+        }
+        .div1{
+            background: #009900;
+        }
+        .div2{
+            background: orange;
+        }
+        .div3{
+            background: yellow;
+        }
+        tr,th{
+            overflow: hidden;
+        }
+        th{
+            width: 100px;
+            height: 100px;
+        }
+
+        .tb-box{
+            height: 300px;
+            width: 500px;
+            background: #336699;
+            margin: 0 auto;
+        }
+        ul{
+            display: block;
+            list-style: none;
+        }
+        .tb-li{
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            float: left;
+            padding: 10px;
+            background: #009900;
+            border: yellow 1px solid;
+            font: 9px/12px "Microsoft Himalaya";
+        }
+        .pic1{
+            /*margin: 10px auto;*/
+            /*left: 0px;*/
+            /*top: -500px;*/
+            width: 24px;
+            height: 24px;
+            overflow: hidden;
+            background: red url("../../img/images/taobao.png") 0 -45px;
+        }
+        .pic{
+            margin: 10px auto;
+            width: 24px;
+            height: 24px;
+            overflow: hidden;
+        }
+        .span-pic{
+            margin: 10px auto;
+            width: 24px;
+            height: 24px;
+            background: red url("../../img/images/taobao.png") 0 -45px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#div1">div1</a>
+    <a href="#div2">div2</a>
+    <a href="#div3">div3</a>
+    <div class="box">
+        <div class="div1" id="div1">div1</div>
+        <div class="div2" id="div2">div2</div>
+        <div class="div3" id="div3">div3</div>
+    </div>
+    <div class="pic1">
+    </div>
+    <div class="tb-box">
+        <ul>
+            <li class="tb-li">
+                <div class="span-pic">
+                    <!--<img src="../../img/images/taobao.png" alt="">-->
+                </div>
+                <span style="display: inline-block">充话费</span>
+            </li>
+            <li class="tb-li">
+                <div class="pic" style="left: 100px;top: -45px;">
+                    <img src="../../img/images/taobao.png" alt="">
+                </div>
+                <span style="font-size: 9px">旅行</span>
+            </li>
+            <li class="tb-li">
+                <div class="pic">
+                    <img src="../../img/images/taobao.png" alt="">
+                </div>
+                <span style="font-size: 9px">车险</span>
+            </li>
+            <li class="tb-li">
+                <div class="pic">
+                    <img src="../../img/images/taobao.png" alt="">
+                </div>
+                <span style="font-size: 9px">游戏</span>
+            </li>
+            <li class="tb-li">
+                <div class="pic">
+                    <img src="../../img/images/taobao.png" alt="">
+                </div>
+                <span style="font-size: 9px">充话费</span>
+            </li>
+            <li class="tb-li">
+                <div class="pic">
+                    <img src="../../img/images/taobao.png" alt="">
+                </div>
+                <span style="font-size: 9px">旅行</span>
+            </li>
+            <li class="tb-li">
+                <div class="pic">
+                    <img src="../../img/images/taobao.png" alt="">
+                </div>
+                <span style="font-size: 9px">车险</span>
+            </li>
+            <li class="tb-li">
+                <div class="pic">
+                    <img src="../../img/images/taobao.png" alt="">
+                </div>
+                <span style="font-size: 9px">游戏</span>
+            </li>
+        </ul>
+
+        <!--<table width="400" height="400" border="1" cellspacing="0" cellpadding="0" align="center">-->
+            <!--<tr>-->
+                <!--<th>-->
+                    <!--<img src="../../img/taobao-icons.png" alt="" width="60" height="60">-->
+                <!--</th>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+                <!--<th>测试内容</th>-->
+            <!--</tr>-->
+        <!--</table>-->
+    </div>
+</body>
+</html>

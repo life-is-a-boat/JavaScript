@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>算术运算符</title>
+    <script type="text/javascript">
+        //算术运算符  + 、- 、
+        var n1 = 1;
+        var n2 = 2;
+        alert(n1+n2);
+        alert(n1-n2);
+        //两个数值变量
+        console.log((n2-n1));//1
+        console.log((n1+n2));//3
+        //一个数值 一个数值字符
+        var n3 ='34';
+        console.log((n3-n1));//33
+        console.log(typeof(n3-n1));//number
+        console.log((n3+n2));//342
+        console.log(typeof(n3+n2));//string
+
+        //一个数值  一个非数值字符
+        var n4 ='123a';
+
+        console.log((n1-n4));//NaN
+        console.log((n2+n4));//2123a
+        console.log((n3-n4));//NaN  //两个字符相减 得到NaN
+        //NaN not a number
+        //0 作为除数  得到的结果 Infinity （无限大） 是一个数字类型
+
+        console.log((n3*n2));//68 一个数值字符 一个数值
+        console.log((n4*n2));//NaN 一个非数值字符 一个数值
+        console.log((n3*n4));//NaN 一个非数值字符 一个数值字符
+
+        console.log((n3/n2));//17  一个数值字符 一个数值
+        console.log((n4/n2));//NaN 一个非数值字符 一个数值
+        console.log((n3/n4));//NaN 一个数值字符 一个非数值字符
+
+        console.log((n1/0));//Infinity
+        console.log((0/n2));//0
+        console.log((n3/0));//Infinity
+        console.log((n4/0));//NaN
+        console.log((0/n4));//NaN
+
+        let n8 = 0;
+        console.log(typeof(n8));//
+
+        // const n9 = 10;
+        // n9 += 1;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

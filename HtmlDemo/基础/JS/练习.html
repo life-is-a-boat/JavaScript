@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <style type="text/css">
+        label{
+            font-size: 12px;
+            font-family: Helvetica,'宋体';
+            color: lightgray;
+            position: absolute;
+        }
+        input{
+            padding: 0;
+            margin: 0;
+        }
+        #jd{
+            top: 36px;
+            left: 61px;
+        }
+
+        #input1{
+            /*color: transparent;*/
+            /*height: 24px;*/
+        }
+        .show{
+            display: block;
+        }
+        .hidden{
+            display: none;
+        }
+
+        table{
+            width: 300px;
+            margin: 100px auto 0;
+            border: 1px solid #336699;
+            border-spacing: 0;
+        }
+        th{
+            border: 1px solid #d0d0d0;
+        }
+    </style>
+
+</head>
+<body>
+
+淘宝：<label id="tmall" for="input2" class="show">我是淘宝</label><input id="input2" type="text" value=""><br/>
+<br/>
+<br/>
+京东：<label id="jd" class="show" for="input1">我是京东</label>
+<input id="input1" type="text">
+
+<table>
+    <thead>
+        <tr>
+            <th><input type="checkbox"></th>
+            <th>菜名</th>
+            <th>饭店</th>
+        </tr>
+    </thead>
+</table>
+
+
+<!--<script type="text/javascript">-->
+
+    <!--var input1 = document.getElementById("input1");-->
+    <!--var jd = document.getElementById("jd");-->
+
+    <!--input1.onfocus = function () {-->
+        <!--console.log("获取焦点事件");-->
+        <!--jd.className = "hidden";-->
+    <!--};-->
+    <!--input1.onblur = function () {-->
+        <!--console.log("失去焦点事件");-->
+        <!--jd.className = "show";-->
+    <!--}-->
+
+<!--</script>-->
+
+</body>
+</html>

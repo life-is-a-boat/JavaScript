@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /**
+     * 字符串相关的方法
+     * 1.字符串长度
+     * 2.字符串的位置查找
+     * 3.字符串的拼接
+     * 4.字符串的截取
+     * 4.字符串的插入
+     * 5.字符串的替代
+     * 6.字符串的分割
+     * */
+        var str1 = '大王叫我来巡山，寻完北山寻南山！';
+        document.write(str1+'<br/>');
+        console.log(typeof str1);
+        document.write('字符长度：'+str1.length);
+
+        document.write('indexOf()       山的位置：'+str1.indexOf('山')+'<br/>');
+        document.write('lastIndexOf()   山的位置：'+str1.lastIndexOf('山')+'<br/>');
+
+        var str2 = 'aaa和尚1';
+        var str3 = 'aab和尚1';
+        //比较 字符串
+        console.log(str2.localeCompare(str3));//-1
+        console.log(str2.match(str3));//null
+
+        //字符串截取
+        console.log(str2.slice(1,3));//start end
+        console.log(str2.slice(1));
+
+        //字符串转数组
+        console.log(str2.split(''));//分隔字符
+
+
+        //字符串替换
+        console.log(str2.replace('a','A'));
+
+    </script>
+</body>
+</html>

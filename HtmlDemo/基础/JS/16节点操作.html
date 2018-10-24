@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点操作</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            height: 300px;
+            background: #ccc;
+        }
+        .box1{
+            margin: 10px auto;
+            height: 200px;
+            background: pink;
+        }
+        .box2{
+            width: 100px;
+            height: 80px;
+            background: blue;
+            /*float: right;*/
+        }
+        .box3{
+            width: 100px;
+            height: 120px;
+            background: orange;
+        }
+        a{
+            text-decoration: none;
+        }
+        img{
+            width: 90px;
+            height: 90px;
+            background: #000;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            /**
+             * 节点的操作
+             * 创建
+             * 添加
+             * 删除
+             * 克隆
+             * */
+            //创建标签
+            var div = document.createElement("div");
+            div.style.width = '200px';
+            div.style.height = '100px';
+            div.style.background = "#fff";
+            console.log(div);
+
+            var node1 = document.getElementById('box1');
+            //插入节点
+            node1.parentNode.appendChild(div);
+            // node1.parentNode.insertBefore(div,node1);
+
+            //删除
+            var box3 = document.getElementById("box3");
+            var a = document.getElementsByTagName("a")[0];
+            console.log(a);
+            // box3.removeChild(a);
+            a.parentNode.removeChild(a);
+
+            //clone
+            var box2 = document.getElementById("box2");
+            box2.parentNode.appendChild(box2.cloneNode());
+            box2.parentNode.appendChild(box3.cloneNode(true));
+
+        }
+    </script>
+</head>
+<body>
+
+<div class="box">
+    <div class="box1" id="box1">
+        <div class="box2" id="box2"></div>
+        <div class="box3" id="box3">
+            <a href="#">测试</a>
+            <img src="" alt="呵呵哒">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

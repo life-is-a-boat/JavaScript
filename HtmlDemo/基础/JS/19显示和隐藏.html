@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示和隐藏盒子</title>
+    <style type="text/css">
+        body{
+            font-family: "Helvetica","Arial",serif;
+            margin: 1em 10%;
+        }
+        .show{
+            display: block;
+        }
+        .hidden{
+            display: none;
+        }
+        .nodeSmall{
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 10px;
+            top: 40%;
+            background: red url("../../img/jd/bgs.png") no-repeat -159px -51px;
+        }
+        .erweima{
+            position: absolute;
+            top: -50%;
+            transform: translateY(-10%);
+            /*vertical-align: middle;*/
+            left: -150px;
+        }
+        .bigBox{
+            width: 200px;
+            height: 200px;
+            background: #FF0000;
+            position: relative;
+        }
+        .smallBox{
+            width: 100px;
+            height: 60px;
+            background: #336699;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+        }
+    </style>
+
+
+</head>
+<body>
+    <a id="isDisplay" href="#">隐藏</a>
+    <img src="../../img/jd/1-small.jpg" alt="" id="image" class="show">
+    <div class="bigBox">
+        <div class="smallBox"></div>
+    </div>
+    <div class="nodeSmall">
+        <div class="erweima hidden">
+            <img src="../../img/jd/456.png" alt="">
+        </div>
+    </div>
+    <script type="text/javascript">
+        var a1 = document.getElementById("isDisplay");
+        var img = document.getElementById("image");
+        a1.onclick = function () {
+            console.log(this.innerHTML);
+            if (this.innerHTML === "隐藏"){
+                this.innerHTML = "显示";
+                img.className = "hidden";
+            }
+            else {
+                this.innerHTML = "隐藏";
+                img.className = "show";
+            }
+        };
+
+        var nodeSmall = document.getElementsByClassName("nodeSmall")[0];
+        var div = nodeSmall.getElementsByClassName("erweima")[0];
+        nodeSmall.onmouseover = function () {
+            div.className = "erweima show";
+        }
+        nodeSmall.onmouseleave = function () {
+            div.className = "erweima hidden";
+        }
+
+    </script>
+</body>
+</html>

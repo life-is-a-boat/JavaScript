@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window</title>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+            alert('onload');
+        }
+        window.onclick = function() {
+            var json = {'name':'hello','fullscreen':'no','width':'100px','height':'100px','top':'100px','location':'no'};
+            window.open('https://baidu.com','_parent',json);
+        }
+    </script>
+</body>
+</html>
+d

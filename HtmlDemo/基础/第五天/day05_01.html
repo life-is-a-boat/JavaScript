@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <style>
+        input{
+            width: 50px;
+        }
+    </style>
+    <script>
+        function calc() {
+            var num1 = document.getElementById("number1").value;
+            var num2 = document.getElementById("number2").value;
+            num1 = parseFloat(num1);
+            num2 = parseFloat(num2);
+
+            var result = num1+num2;
+            document.getElementById("number3").value=result;
+
+        }
+    </script>
+</head>
+<body>
+    <div style="font-size: small"> 本练习效果如下：点击运算按钮，执行加法运算</div>
+    <input type="text" value="1" id="number1"> +
+    <input type="text" value="2" id="number2"> =
+    <input type="text" value="3" id="number3">
+    <input type="submit" value="运算" onclick="calc()">
+</body>
+</html>

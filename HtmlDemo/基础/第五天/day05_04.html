@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+    <script>
+        function p(s) {
+            document.write(s);
+            document.write("<br>");
+        }
+        function check(value, a) {
+//            p(a)
+            for (var i = 0; i < a.length; i ++)
+            {
+                var value1 = a[i];
+                if (value1 == value) return true;
+            }
+            return false;
+        }
+        function sortNoRepleace(a) {
+            var result = new Array();
+            var index = a.length;
+            for (var i = 0;i < index;i++) {
+                var value = a.pop();
+                p(value);
+                if (!check(value,a)) {
+                    result.unshift(value);
+                }
+            }
+            return result;
+        }
+        var a = new Array(1,2,1,3,2);
+        p(a);
+        p(sortNoRepleace(a));
+    </script>
+</body>
+</html>

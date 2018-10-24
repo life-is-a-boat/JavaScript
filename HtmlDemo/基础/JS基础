@@ -1,0 +1,30 @@
+JavaScript 基础
+1、基本数据类型
+undefine   声明了但未赋值
+Boolean
+Number
+String
+
+var         动态类型
+typeof
+null        空对象/对象不存在
+
+2、类型转换
+伪对象  JavaScript语言 即便是基本类型 也是伪对象 所以他们都有属性和方法
+转换为字符串  toString()
+数字转字符串  Number转换为字符串 默认模式  基模式
+转换为数字    内置函数 parseInt()和parseFloat()
+转换为Boolean  内置函数Boolean()
+            当转换字符串时     非空即为true
+            当转换数字时       非0即为true
+            当转换对象时       非null即为true
+
+Number()和parseInt()的区别
+    区别在于 当转换的内容非数字的时候 Number()会返回NaN（not a number）
+            parseInt()要看情况  如果以数字开头 就会返回开头的合法数字部分如果以非数字开头 则返回NaN
+
+String()和toString()的区别
+    区别在于对null的处理  String()会返回字符串"null"  toString() 就会报错 无法执行
+
+3、函数
+    function 关键字用于定义一个函数

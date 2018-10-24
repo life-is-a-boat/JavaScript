@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复利计算</title>
+    <style>
+        /*body{*/
+            /*font-family: 宋体;*/
+            /*font-size: 12px;*/
+        /*}*/
+        table{
+            /*width: 240px;*/
+            /*height: 500px;*/
+            border-collapse: collapse;
+            /*border:1px solid lightgray;*/
+        }
+        td{
+            /*width: 120px;*/
+            /*height: 30px;*/
+            border:1px solid silver;
+            padding: 5px;
+            font-size: 12px;
+        }
+        input{
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>起始资金</td>
+            <td><input type="text" value="0" id="initMoney"> ¥</td>
+        </tr>
+        <tr>
+            <td>每年收益</td>
+            <td><input type="text" value="0" id="rate"> %</td>
+        </tr>
+        <tr>
+            <td>复利年数</td>
+            <td><input type="text" value="0" id="year"> 年</td>
+        </tr>
+        <tr>
+            <td>每年追加资金</td>
+            <td><input type="text" value="0" id="each"> ¥</td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="button" value="计算" ></td>
+        </tr>
+        <tr>
+            <td>本金和</td>
+            <td><input type="text" value="0" disabled> ¥</td>
+        </tr>
+        <tr>
+            <td>利息和</td>
+            <td><input type="text" value="0" disabled> ¥</td>
+        </tr>
+        <tr>
+            <td>本息和</td>
+            <td><input type="text" value="0" disabled> ¥</td>
+        </tr>
+    </table>
+</body>
+</html>

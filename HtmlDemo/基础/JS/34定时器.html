@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+    <style type="text/css">
+        span{
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            color: #000;
+            font-family: Arial;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 100px;
+            background-color: #33ff33;
+        }
+        button{
+            width: 200px;
+            height: 45px;
+            background-color: #FF0000;
+            text-align: center;
+        }
+        div{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+定时器
+setinterval(code,millisec,lang)  无限循环
+setTimeout(code,millisec,lang)  只执行一次
+-->
+    <span>0</span>
+    <div></div>
+<script>
+    // setInterval();
+    var span = document.getElementsByTagName('span')[0];
+    var button = document.createElement('button');
+    button.innerHTML = 'button';
+    document.body.appendChild(button);
+
+    function checkoutTime(i) {
+        if (i < 10) i = '0'+i;
+        return i;
+    }
+    var timer;
+    var startTime = new Date();
+
+    function displayTime() {
+        var today = new Date();
+
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkoutTime(m);
+        s = checkoutTime(s);
+        button.innerHTML = h+':'+m+':'+s;
+        var time1 = today.getTime()/1000 - startTime.getTime()/1000;
+        console.log('time:'+today+'   时间间隔:'+time1);
+        if (time1 >= 10) {
+            clearTimeout(timer);
+            return;
+        }
+        console.log(today);
+        timer = setTimeout('displayTime()',500);
+    }
+    displayTime();
+
+
+    var timanel = 0;
+    setTimeout(function () {
+        console.log(timanel);
+        timanel++;
+        span.innerHTML = timanel;
+    },10000);
+
+    function hello() {
+        console.log( typeof timanel);
+        if (timanel == 10){
+            console.log('invaild');
+            clearInterval(currentTimer);
+        }
+        timanel++;
+        span.innerHTML = timanel;
+    }
+    currentTimer = setInterval(hello,1000);
+
+</script>
+
+    <script type="text/javascript">
+        var div = document.getElementsByTagName('div')[0];
+        var weeks = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        var timer;
+        function getTime(date) {
+            var year = date.getFullYear();
+            var month = date.getMonth()+1;
+            var day = date.getDate();
+            var week = date.getDay();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var seconds = date.getSeconds();
+            div.innerHTML = '今天是：'+year+'年'+month+'月'+day+'日 '+weeks[week]+'   '+checkoutTime(hour)+':'+checkoutTime(minute)+':'+checkoutTime(seconds);
+        }
+        function daojishi() {
+            var desTime = new Date('2018/08/10 00:00:00');
+            var date = new Date();
+            getTime(date);
+            var timerintevar = desTime.getTime()-date.getTime();
+            var day = 0;
+            var hour = 0;
+            var minute = 0;
+            var seconds = 0;
+            var mseconds = 0;
+            console.log('时间差：'+timerintevar);
+            if (timerintevar/1000/60/60/24 >= 0){//天
+                day = checkoutTime(timerintevar/1000/60/60/24);
+                console.log('天'+parseInt(day));
+            }
+            if (timerintevar/1000/60/60 >= 0) {//小时
+                hour = checkoutTime(timerintevar/1000/60/60%24);
+                console.log(hour);
+            }
+            if (timerintevar/1000/60 >= 0) {//分钟
+                minute = checkoutTime(timerintevar/1000/60%60);
+                console.log(minute);
+            }
+            if (timerintevar/1000 >= 0) {//秒
+                seconds = checkoutTime(timerintevar/1000%60);
+                console.log(seconds);
+            }
+            if (timerintevar%1000 >= 0) {//秒
+                mseconds = timerintevar%1000;
+                console.log('毫秒'+parseInt(mseconds));
+            }
+            div.innerHTML += '</br> 距离'+desTime.getFullYear()+'年'+(desTime.getMonth()+1)+'月'+desTime.getDate()+'日  还有'+parseInt(day)+'天'+parseInt(hour)+'小时'+parseInt(minute)+'分钟'+parseInt(seconds)+'秒'+parseInt(mseconds)+'毫秒';
+
+        }
+        timer = setInterval(daojishi,1000);
+
+    </script>
+
+</body>
+</html>

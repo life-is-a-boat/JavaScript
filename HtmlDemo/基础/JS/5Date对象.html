@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+    <script type="text/javascript">
+        //时间对象 Date
+        var myDate = new Date();//通过new方法创建对象
+        alert(myDate);//返回一个完整的时间
+        console.log(myDate);//Thu May 24 2018 16:32:06 GMT+0800 (CST)
+        console.log(myDate.month); //undefined
+        console.log(myDate.getDay());//当前周几
+        console.log(myDate.getMonth()+1);//返回当前月份
+        console.log(myDate.getFullYear());//返回当前年份 2018
+        console.log(myDate.getHours());// 返回小时
+        console.log(myDate.getMinutes());//返回分钟
+        console.log(myDate.getSeconds());//返回当前秒数 4
+        console.log(myDate.getMilliseconds());//返回当前毫秒
+        console.log(myDate.getTime());// 时间戳
+
+
+
+        //时间定义方式2
+        var date2 = new Date('1992/02/20 12:00:00');
+        console.log(date2);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

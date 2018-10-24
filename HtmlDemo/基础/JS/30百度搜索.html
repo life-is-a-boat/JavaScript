@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 700px;
+            margin: 100px auto;
+            /*height: 36px;*/
+            /*border: 1px solid #336699;*/
+        }
+        input{
+            outline: none;
+        }
+        .inputText{
+            padding-left: 2px;
+            height: 36px;
+            width: 600px;
+            font-size: 32px;
+            line-height: 36px;
+            background-color: #33ff33;
+            /*border: 0;*/
+            float: left;
+        }
+        .su{
+            height: 40px;
+            width: 94px;
+            border: 0px;
+            background-color: #336699;
+            float: right;
+            color: #ffff;
+        }
+        ul {
+            width: 594px;
+            padding: 5px;
+            list-style: none;
+            border: 1px solid red;
+        }
+        li:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" class="inputText">
+        <input type="submit" value="搜索" class="su">
+    </div>
+    <script type="text/javascript">
+
+        var box = document.getElementsByClassName('box')[0];
+        var inputText = document.getElementsByClassName('inputText')[0];
+        var newArr = ['a','aaa','ab','aab'];
+        var ul = document.createElement('ul');
+
+        window.onclick = function () {
+            if (box.children[2]) {
+                box.removeChild(box.children[2]);
+                ul.innerHTML = '';
+            }
+        };
+        inputText.onkeyup = function () {
+            // alert(this.value);
+
+            if (this.value.length === 0 || newArr.length === 0){
+                return;
+            }
+            ul.innerHTML = '';
+
+            for (var i = 0; i < newArr.length; i++) {
+                var str =  this.value.replace(' ','');
+                console.log('\n'+str);
+                console.log((String(this.value)),newArr[i]);
+                console.log(typeof newArr[i],typeof this.value);
+                if (newArr[i].indexOf(this.value) >= 0){
+                    ul.innerHTML += '<li>'+newArr[i]+'</li>';
+                }
+            }
+            box.appendChild(ul);
+
+        }
+    </script>
+</body>
+</html>
