@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c390fca0-c9d3-4390-b01d-5cef9a45e978" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/sina.html" beforeDir="false" afterPath="$PROJECT_DIR$/sina.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/基础/AJAX基础" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/基础/JQuery基础" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/基础/DOM节点" beforeDir="false" afterPath="$PROJECT_DIR$/基础/DOM节点" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/基础/第三天/test03_02.html" beforeDir="false" afterPath="$PROJECT_DIR$/基础/第三天/test03_02.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,24 +75,33 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="DOM节点" value="44" />
-          <entry key="html" value="191" />
+          <entry key="AJAX基础" value="110" />
+          <entry key="DOM节点" value="282" />
+          <entry key="JQuery基础" value="11" />
+          <entry key="html" value="1187" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="191" />
-          <entry key="PLAIN_TEXT" value="44" />
+          <entry key="HTML" value="1187" />
+          <entry key="PLAIN_TEXT" value="403" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="5" />
+          <entry key="AJAX基础" value="1" />
+          <entry key="JQuery基础" value="1" />
+          <entry key="JS基础" value="1" />
+          <entry key="JS对象+BOM" value="1" />
+          <entry key="html" value="7" />
+          <entry key="rnc" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="5" />
+          <entry key="HTML" value="7" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="RNG Compact" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -101,56 +114,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/基础/DOM节点">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+            <state relative-caret-position="85">
+              <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/404.html">
+        <entry file="file://$PROJECT_DIR$/基础/AJAX基础">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-147">
-              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+            <state relative-caret-position="60">
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1.html">
+        <entry file="file://$PROJECT_DIR$/Test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-57" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-916">
-              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+            <state relative-caret-position="86">
+              <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sina.html">
+        <entry file="file://$PROJECT_DIR$/基础/JQuery基础">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="165" column="31" lean-forward="true" selection-start-line="165" selection-start-column="31" selection-end-line="165" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -158,7 +150,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/基础/JS/13DOM.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="74">
               <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
             </state>
           </provider>
@@ -184,6 +176,7 @@
       <find>input1</find>
       <find>contentModel</find>
       <find>slice</find>
+      <find>表格</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -202,10 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/xiaomi.html" />
-        <option value="$PROJECT_DIR$/基础/CSS/内边距-padding.html" />
-        <option value="$PROJECT_DIR$/基础/CSS/显示隐藏.html" />
-        <option value="$PROJECT_DIR$/基础/CSS/滑动门-简单.html" />
         <option value="$PROJECT_DIR$/基础/CSS/固定居中-position.html" />
         <option value="$PROJECT_DIR$/基础/CSS/复杂滑动门-index.html" />
         <option value="$PROJECT_DIR$/基础/JS/输出信息.html" />
@@ -251,8 +240,12 @@
         <option value="$PROJECT_DIR$/基础/第四天/day04_04.html" />
         <option value="$PROJECT_DIR$/基础/day06" />
         <option value="$PROJECT_DIR$/基础/第七天/day07_01.html" />
-        <option value="$PROJECT_DIR$/基础/DOM节点" />
         <option value="$PROJECT_DIR$/sina.html" />
+        <option value="$PROJECT_DIR$/基础/第三天/test03_02.html" />
+        <option value="$PROJECT_DIR$/基础/DOM节点" />
+        <option value="$PROJECT_DIR$/基础/AJAX基础" />
+        <option value="$PROJECT_DIR$/Test.html" />
+        <option value="$PROJECT_DIR$/基础/JQuery基础" />
       </list>
     </option>
   </component>
@@ -274,7 +267,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-45" />
+    <option name="x" value="452" />
     <option name="y" value="23" />
     <option name="width" value="1129" />
     <option name="height" value="727" />
@@ -853,12 +846,12 @@
       <workItem from="1532309718806" duration="957000" />
       <workItem from="1532326310635" duration="8091000" />
       <workItem from="1540369134865" duration="6620000" />
-      <workItem from="1540379790300" duration="892000" />
+      <workItem from="1540379790300" duration="10454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="423036000" />
+    <option name="totallyTimeSpent" value="432598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -870,7 +863,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-45" y="23" width="1129" height="727" extended-state="0" />
+    <frame x="452" y="23" width="1129" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49376947" visible="true" weight="0.24548736" />
@@ -916,32 +909,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-361" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/基础/JS/33BOM的内置对象.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/基础/JS/30百度搜索.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/基础/JS/31表格操作.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/基础/JS/26创建列表高亮显示美女.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45" />
@@ -1061,11 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/基础/第三天/test03_02.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-462" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/基础/第三天/day03_04.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1183,20 +1145,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/基础/JS对象+BOM">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/基础/JS基础">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/基础/第七天/day07_01.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1204,17 +1152,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/基础/DOM节点">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/tables.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="229">
+          <caret line="216" column="16" selection-start-line="216" selection-start-column="16" selection-end-line="216" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/基础/JS/13DOM.html">
+    <entry file="file://$PROJECT_DIR$/sina.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        <state relative-caret-position="198">
+          <caret line="159" column="11" selection-start-line="159" selection-start-column="11" selection-end-line="159" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-916">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1225,34 +1197,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.html">
+    <entry file="file://$PROJECT_DIR$/基础/JS基础">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="285">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/基础/JS对象+BOM">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-916">
-          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        <state relative-caret-position="220">
+          <caret line="93" column="11" lean-forward="true" selection-start-line="93" selection-start-column="11" selection-end-line="93" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sina.html">
+    <entry file="file://$PROJECT_DIR$/基础/JS/13DOM.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="165" column="31" lean-forward="true" selection-start-line="165" selection-start-column="31" selection-end-line="165" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="74">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/基础/第三天/test03_02.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/基础/DOM节点">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="86" column="33" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/基础/AJAX基础">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/基础/JQuery基础">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

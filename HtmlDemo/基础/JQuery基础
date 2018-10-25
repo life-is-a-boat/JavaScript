@@ -1,0 +1,8 @@
+JQuery
+    JQuery是一个javascript的框架，是对javascript的一种封装。
+    通过JQuery可以非常方便的操作html的元素
+
+
+
+$(function(){
+});

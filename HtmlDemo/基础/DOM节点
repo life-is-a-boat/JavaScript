@@ -1,12 +1,12 @@
 HTML DOM（Document Object Model 文档对象模型）
 
 1.节点概念
-DOM把所有的html都转换为节点
-整个文档 是一个节点
-元素 是节点  document.getElementbyId
-元素属性 是节点 attributes
-元素内容 是节点 childNodes
-注释 也是节点
+    DOM把所有的html都转换为节点
+    整个文档 是一个节点
+    元素 是节点  document.getElementbyId
+    元素属性 是节点 attributes
+    元素内容 是节点 childNodes
+    注释 也是节点
 
 2.获取节点
     document.getElementById
@@ -17,9 +17,9 @@ DOM把所有的html都转换为节点
     document.getElementsByClassName 根据class返回一个节点数组
     document.getElementsByName    通过表单元素的name获取元素节点  表单元素都有name属性，
                                   通过getElementsByName可以根据name属性的值，获取元素节点。
-内容节点  childNodes
-属性节点  attributes
-nodeName和nodeValue表示一个节点的名称和值
+    内容节点  childNodes
+    属性节点  attributes
+    nodeName和nodeValue表示一个节点的名称和值
 
 注：因为javascript是解释语言，是顺序执行的。 在执行到 document.getElementById的时候，
     div标签还没有加载，所以无法获取。
@@ -29,7 +29,74 @@ nodeName和nodeValue表示一个节点的名称和值
     节点类型    nodeType
     元素的文本内容 innerHTML
 
+4.样式
+    一个元素节点的style属性即对应的css
 
+5.事件
+    焦点事件
+        onfocus  获取焦点
+        onblur   失去焦点
+    鼠标事件
+        onmousedown     按下
+        onmouseup       弹起
+        onmousemove     经过
+        onmouseover     进入
+        onmouseout      退出
+     注: 当鼠标进入一个组件的时候，onmousemove和onmouseover都会被触发，区别在于无论鼠标
+         在组件上如何移动，onmouseover只会触发一次，onmousemove每次移动都会触发
+    键盘事件
+        onkeydown
+        onkeypress
+        onkeyup
+    点击事件
+        onclick     单击
+        ondbclick   双击
+    变化事件
+        onchange
+    提交事件
+        onsubmit
+    加载事件
+        onload
+    当前组件
+        this
+    阻止事件的发生
+        return false
+
+6.节点关系
+    parentNode	父节点关系
+    firstNode lastNode
+
+    previousSibling
+    nextSibling	同胞节点关系
+
+    childNodes	子节点关系
+    firstChild lastChild
+
+    childNodes  children
+    childNodes和children的区别
+        childNodes和children都可以获取一个元素节点的子节点。
+        childNodes 会包含文本节点
+        children 会排除文本节点
+
+7.创建节点
+    createElement	创建元素节点
+     对应的添加节点的方法 appendChild
+    createTextNode	创建文本节点
+      对应的添加节点的方法 appendChild
+    createAttribute	创建属性节点
+      对应的添加节点的方法 setAttributeNode
+
+8.删除节点
+    removeChild	删除元素节点
+    removeAttribute	删除属性节点
+    removeChild	删除文本节点
+
+9.替换节点
+    通过replaceChild进行节点的替换
+
+10.插入节点
+    appendChild	追加节点
+    insertBefore	在前方插入节点
 
 
 

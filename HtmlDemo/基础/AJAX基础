@@ -1,0 +1,16 @@
+Ajax
+    通过AJAX (Asynchronous JAvaScript and XML) 实现异步刷新
+
+Ajax请求和相应：
+ 请求
+    创建XMLHttpRequest
+    设置相应函数
+    设置访问页面
+    执行访问
+
+ 相应
+    调用响应函数
+    判断是否响应成功
+    获取相应文本
+    显示相应文本
+
