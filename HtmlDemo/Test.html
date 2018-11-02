@@ -24,8 +24,8 @@
             height: 30px;
             border-bottom: 1px solid grey;
         }
-
     </style>
+    <script type="text/javascript" src="http://how2j.cn/study/jquery.min.js"></script>
 </head>
 <body>
     <table>
@@ -67,6 +67,34 @@
         密码：<input type="password" placeholder="请输入密码" onchange="inputTextChange()">
     </div>
     <br>
+
+
+    <br>
+    <br>
+
+    <div>
+        <button type="submit" id="b1" value="按钮" style="width: 100px;height: 40px;background-color: #cc00ff;">按钮</button>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $("#b1").click(function () {
+                alert("点击了按钮！")
+            })
+        })
+    </script>
+
+
+    <div>
+        <input type="text" id="input1" value="默认值">
+        <button id="b2" style="width: 100px;height: 30px;">取值</button>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $("#b2").click(function () {
+                alert($("#input1").val())
+            })
+        })
+    </script>
     <script type="text/javascript">
         var trs = document.getElementsByTagName("tr");
         for (var i = 1; i < trs.length; i++) {

@@ -3,6 +3,25 @@ JQuery
     通过JQuery可以非常方便的操作html的元素
 
 
-
 $(function(){
 });
+
+
+1.常见方法
+    .val()      取值
+    .html()     获取元素内容,如果有子元素，保留标签
+    .text()     获取元素内容,如果有子元素，不包含子元素标签
+
+2.CSS
+    主要是添加 类元素
+    addClass()
+    removeClass()
+    toggleClass()这里的切换，指得是： 如果存在就删除 如果不存在，就添加
+
+    css 函数 有两种样式
+    1）css(property,value) 单一样式
+    2) css(p1:v1,p2:v2) 多种样式
+
+3.选择器
+
+
