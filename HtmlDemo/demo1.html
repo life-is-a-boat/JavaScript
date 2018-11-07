@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试1</title>
+    <script src="http://how2j.cn/study/jquery.min.js"></script>
+</head>
+<body>
+
+<!--<script>-->
+    <!--$(function(){-->
+        <!--$("#b1").click(function(){-->
+            <!--$("#d").addClass("pink");-->
+        <!--});-->
+    <!--});-->
+
+<!--</script>-->
+<!--<button id="b1">增加背景色</button>-->
+<!--<br>-->
+<!--<br>-->
+
+<!--<style>-->
+    <!--.pink{-->
+        <!--background-color:pink;-->
+    <!--}-->
+<!--</style>-->
+
+<!--<div id="d">-->
+
+    <!--Hello JQuery-->
+
+<!--</div>-->
+
+
+<script>
+    $(function(){
+        $("#b1").click(function(){
+            // $("div[id]").toggleClass("border");
+            $(".fuck").toggleClass('border');
+        });
+        $("#b2").click(function(){
+            $("div[id='pink']").toggleClass("border");
+        });
+        $("#b3").click(function(){
+            $("div[id!='pink']").toggleClass("border");
+        });
+        $("#b4").click(function(){
+            $("div[id^='p']").toggleClass("border");
+        });
+        $("#b5").click(function(){
+            $("div[id$='k']").toggleClass("border");
+        });
+        $("#b6").click(function(){
+            $("div[id*='ee']").toggleClass("border");
+        });
+    });
+</script>
+<button id="b1">给有id属性的div切换边框</button>
+<button id="b2">给id=pink的div切换边框</button>
+<button id="b3">给有id!=pink属性的div切换边框</button>
+<button id="b4">给有id以p开头的div切换边框</button>
+<button id="b5">给有id以k结尾的div切换边框</button>
+<button id="b6">给有id包含ee的div切换边框</button>
+
+<br>
+<br>
+
+<style>
+    .pink{
+        background-color:pink;
+    }
+    .green{
+        background-color:green;
+    }
+    .border{
+        border: 1px blue solid;
+
+    }
+
+    button{
+        margin-top:10px;
+        display:block;
+    }
+
+    div{
+        margin:10px;
+    }
+</style>
+
+<div id="pink" class="fuck">
+    id=pink的div
+</div>
+
+<div id="green">
+    id=green的div
+</div>
+
+<div >
+    没有id的div
+</div>
+
+</body>
+</html>

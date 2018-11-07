@@ -76,7 +76,7 @@ HTML DOM（Document Object Model 文档对象模型）
     childNodes和children的区别
         childNodes和children都可以获取一个元素节点的子节点。
         childNodes 会包含文本节点
-        children 会排除文本节点
+        children   会排除文本节点
 
 7.创建节点
     createElement	创建元素节点

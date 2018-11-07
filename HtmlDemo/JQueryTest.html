@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>测试</title>
+    <script type="text/javascript" src="http://how2j.cn/study/jquery.min.js"></script>
     <style type="text/css">
         * {
             margin: 0;
@@ -25,7 +26,6 @@
             border-bottom: 1px solid grey;
         }
     </style>
-    <script type="text/javascript" src="http://how2j.cn/study/jquery.min.js"></script>
 </head>
 <body>
     <table>
@@ -75,6 +75,8 @@
     <div>
         <button type="submit" id="b1" value="按钮" style="width: 100px;height: 40px;background-color: #cc00ff;">按钮</button>
     </div>
+
+    <script type="text/javascript" src="http://how2j.cn/study/jquery.min.js"></script>
     <script type="text/javascript">
         $(function () {
             $("#b1").click(function () {
@@ -110,6 +112,7 @@
         }
 
     </script>
+
     <script type="text/javascript">
         window.onload = function (ev) {
             var button = document.createElement('button');
@@ -140,5 +143,124 @@
             }
         }
     </script>
+
+    <!--css-->
+    <style type="text/css">
+        .aaa {
+            width: 100px;
+            height: 100px;
+            border: #33ff33 solid 1px;
+        }
+    </style>
+    <script type="text/javascript">
+        // function changeClass() {
+        //     var div1 = document.getElementById('css');
+        //     div1.classList.add(aaa);
+        // }
+        $(function () {
+            $('#fuck').click(function () {
+                $('#css').addClass('aaa');
+            });
+            $('#fuck2').click(function () {
+                $('#css').removeClass('aaa');
+            });
+            $('#fuck3').click(function () {
+               $('#css').toggleClass('aaa');
+            });
+        })
+    </script>
+    <button id="fuck">让风雨来的更猛烈点吧</button>
+    <button id="fuck2">风雨过后是彩虹</button>
+    <button id="fuck3">让人生就像过山车</button>
+
+    <div id="css">
+        JQUERY 中对CSS样式的操作
+    </div>
+
+    <!--css 函数-->
+    <script>
+        $(function () {
+            $('#css1').click(function () {
+                $('.one').css('background-color','pink');
+            });
+            $('#css2').click(function () {
+                $('.double').css({'background-color':'pink','color':'green'});
+            })
+        })
+    </script>
+    <button id="css1">设置单一样式</button>
+    <button id="css2">设置多种样式</button>
+    <div class="one">单一样式，只设置背景色</div>
+    <div class="double">多种样式，不仅设置背景色，还设置字体颜色</div>
+
+
+    <script>
+        $(function(){
+            $("#b1").click(function(){
+                $("div[id]").toggleClass("border");
+            });
+            $("#b2").click(function(){
+                $("div[id='pink']").toggleClass("border");
+            });
+            $("#b3").click(function(){
+                $("div[id!='pink']").toggleClass("border");
+            });
+            $("#b4").click(function(){
+                $("div[id^='p']").toggleClass("border");
+            });
+            $("#b5").click(function(){
+                $("div[id$='k']").toggleClass("border");
+            });
+            $("#b6").click(function(){
+                $("div[id*='ee']").toggleClass("border");
+            });
+
+        });
+
+    </script>
+    <button id="b1">给有id属性的div切换边框</button>
+    <button id="b2">给id=pink的div切换边框</button>
+    <button id="b3">给有id!=pink属性的div切换边框</button>
+    <button id="b4">给有id以p开头的div切换边框</button>
+    <button id="b5">给有id以k结尾的div切换边框</button>
+    <button id="b6">给有id包含ee的div切换边框</button>
+
+    <br>
+    <br>
+
+    <style>
+        .pink{
+            background-color:pink;
+        }
+        .green{
+            background-color:green;
+        }
+        .border{
+            border: 1px blue solid;
+
+        }
+
+        button{
+            margin-top:10px;
+            display:block;
+        }
+
+        div{
+            margin:10px;
+        }
+    </style>
+
+    <div id="pink">
+        id=pink的div
+    </div>
+
+    <div id="green">
+        id=green的div
+    </div>
+
+    <div >
+        没有id的div
+    </div>
+
 </body>
 </html>

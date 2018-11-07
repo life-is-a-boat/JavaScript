@@ -2,8 +2,11 @@ JQuery
     JQuery是一个javascript的框架，是对javascript的一种封装。
     通过JQuery可以非常方便的操作html的元素
 
-
+文档加载
 $(function(){
+});
+
+$(document).ready(function(){
 });
 
 
@@ -13,6 +16,7 @@ $(function(){
     .text()     获取元素内容,如果有子元素，不包含子元素标签
 
 2.CSS
+  注意传的类为字符
     主要是添加 类元素
     addClass()
     removeClass()
@@ -23,5 +27,55 @@ $(function(){
     2) css(p1:v1,p2:v2) 多种样式
 
 3.选择器
+    元素 $("tagName")
+       根据 标签名 选择所有该标签的元素
 
+    id  $("#id")
+        根据 id 选择元素
+        id应该是唯一的，如果id重复，则只会选择第一个
 
+    类  $(".className")
+        根据 class 选择元素
+
+    层级  $("selector1 selector2")
+        选择 selector1下的selector2元素
+
+    最先最后    $(selector:first) 满足选择器条件的第一个元素
+               $(selector:last) 满足选择器条件的最后一个元素
+
+    奇偶   $(selector:odd) 满足选择器条件的奇数元素
+           $(selector:even) 满足选择器条件的偶数元素
+           因为是基零的，所以第一排的下标其实是0(是偶数)
+
+    可见性  $(selector:hidden) 满足选择器条件的不可见的元素
+         $(selector:visible) 满足选择器条件的可见的元素
+         注； div:visible 和div :visible(有空格)是不同的意思
+         div:visible 表示选中可见的div
+         div :visible(有空格) 表示选中div下可见的元素
+
+    属性  $(selector[attribute]) 满足选择器条件的有某属性的元素
+        $(selector[attribute=value]) 满足选择器条件的属性等于value的元素
+        $(selector[attribute!=value]) 满足选择器条件的属性不等于value的元素
+        $(selector[attribute^=value]) 满足选择器条件的属性以value开头的元素
+        $(selector[attribute$=value]) 满足选择器条件的属性以value结尾的元素
+        $(selector[attribute*=value]) 满足选择器条件的属性包含value的元素
+        注： 一般不要使用[class=className] 而应该使用.className
+        因为使用$("[class='className']") .toggleClass("anotherClassName")
+        会导致class变成className anotherClassName,再次 使用 [class=className] 就无法选中了
+        而.className没有这个问题。
+
+    表单对象
+            表单对象选择器 指的是选中form下会出现的输入元素
+            :input 会选择所有的输入元素，不仅仅是input标签开始的那些，还包括textarea,select和button
+            :button 会选择type=button的input元素和button元素
+            :radio 会选择单选框
+            :checkbox会选择复选框
+            :text会选择文本框，但是不会选择文本域
+            :submit会选择提交按钮
+            :image会选择图片型提交按钮
+            :reset会选择重置按钮
+            注意: 第7行
+            $("td[rowspan!=13] "+value).toggle(500);
+            $("td[rowspan!=13] 后面有一个空格，表示层级选择器，如果没有就会出错
+            toggle(500) 表示在显示与隐藏之间来回切换，生效时间是500毫秒
+            注： :submit会把<button>元素选中，因为在一些浏览器中，<button>元素的type默认值是submit，所以会选中它。 关于这个问题，请移步参考：使用button元素提交数据
