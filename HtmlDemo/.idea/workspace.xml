@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c390fca0-c9d3-4390-b01d-5cef9a45e978" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/demo1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.html" beforeDir="false" afterPath="$PROJECT_DIR$/JQueryTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基础/DOM节点" beforeDir="false" afterPath="$PROJECT_DIR$/基础/DOM节点" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/基础/JQuery基础" beforeDir="false" afterPath="$PROJECT_DIR$/基础/JQuery基础" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -80,14 +77,14 @@
         <counts>
           <entry key="AJAX基础" value="110" />
           <entry key="DOM节点" value="284" />
-          <entry key="JQuery基础" value="307" />
-          <entry key="html" value="2090" />
+          <entry key="JQuery基础" value="319" />
+          <entry key="html" value="2815" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2090" />
-          <entry key="PLAIN_TEXT" value="701" />
+          <entry key="HTML" value="2815" />
+          <entry key="PLAIN_TEXT" value="713" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -127,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JQueryTest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="162" column="15" lean-forward="true" selection-start-line="162" selection-start-column="15" selection-end-line="162" selection-end-column="15" />
+            <state relative-caret-position="241">
+              <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -144,16 +141,16 @@
         <entry file="file://$PROJECT_DIR$/基础/JQuery基础">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="145">
-              <caret line="56" column="57" lean-forward="true" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+              <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+            <state relative-caret-position="230">
+              <caret line="234" column="23" lean-forward="true" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -247,8 +244,8 @@
         <option value="$PROJECT_DIR$/Test.html" />
         <option value="$PROJECT_DIR$/基础/DOM节点" />
         <option value="$PROJECT_DIR$/JQueryTest.html" />
-        <option value="$PROJECT_DIR$/demo1.html" />
         <option value="$PROJECT_DIR$/基础/JQuery基础" />
+        <option value="$PROJECT_DIR$/demo1.html" />
       </list>
     </option>
   </component>
@@ -270,8 +267,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="17" />
-    <option name="y" value="26" />
+    <option name="x" value="191" />
+    <option name="y" value="343" />
     <option name="width" value="1129" />
     <option name="height" value="727" />
   </component>
@@ -852,12 +849,12 @@
       <workItem from="1540379790300" duration="11130000" />
       <workItem from="1540517672272" duration="5194000" />
       <workItem from="1541067256415" duration="2015000" />
-      <workItem from="1541558428296" duration="7463000" />
+      <workItem from="1541558428296" duration="13261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="447946000" />
+    <option name="totallyTimeSpent" value="453744000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -869,7 +866,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="17" y="26" width="1129" height="727" extended-state="0" />
+    <frame x="298" y="238" width="1129" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49376947" visible="true" weight="0.24548736" />
@@ -1224,20 +1221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/基础/JQuery基础">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="56" column="57" lean-forward="true" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/基础/DOM节点">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
@@ -1247,12 +1230,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JQueryTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="162" column="15" lean-forward="true" selection-start-line="162" selection-start-column="15" selection-end-line="162" selection-end-column="15" />
+        <state relative-caret-position="241">
+          <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/基础/JQuery基础">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="234" column="23" lean-forward="true" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="23" />
         </state>
       </provider>
     </entry>

@@ -53,51 +53,206 @@
         $("#b6").click(function(){
             $("div[id*='ee']").toggleClass("border");
         });
+        $(".b").click(function () {
+            var value = $(this).val();
+            $("td[rowspan!=13] "+value).toggle(50);
+        });
+        $(".b2").click(function () {
+            var value = $(this).val();
+            var options = $("td[rowspan!=13]"+value);
+            alert("选中了"+options.length+"条记录！");
+        })
     });
 </script>
-<button id="b1">给有id属性的div切换边框</button>
-<button id="b2">给id=pink的div切换边框</button>
-<button id="b3">给有id!=pink属性的div切换边框</button>
-<button id="b4">给有id以p开头的div切换边框</button>
-<button id="b5">给有id以k结尾的div切换边框</button>
-<button id="b6">给有id包含ee的div切换边框</button>
+<!--<button id="b1">给有id属性的div切换边框</button>-->
+<!--<button id="b2">给id=pink的div切换边框</button>-->
+<!--<button id="b3">给有id!=pink属性的div切换边框</button>-->
+<!--<button id="b4">给有id以p开头的div切换边框</button>-->
+<!--<button id="b5">给有id以k结尾的div切换边框</button>-->
+<!--<button id="b6">给有id包含ee的div切换边框</button>-->
 
 <br>
 <br>
 
 <style>
-    .pink{
-        background-color:pink;
-    }
-    .green{
-        background-color:green;
-    }
-    .border{
-        border: 1px blue solid;
+    /*.pink{*/
+        /*background-color:pink;*/
+    /*}*/
+    /*.green{*/
+        /*background-color:green;*/
+    /*}*/
+    /*.border{*/
+        /*border: 1px blue solid;*/
 
-    }
+    /*}*/
 
-    button{
-        margin-top:10px;
-        display:block;
-    }
+    /*button{*/
+        /*margin-top:10px;*/
+        /*display:block;*/
+    /*}*/
 
-    div{
-        margin:10px;
+    /*div{*/
+        /*margin:10px;*/
+    /*}*/
+    table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 80%;
+    }
+    table td {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    div button{
+        display: block;
     }
 </style>
 
-<div id="pink" class="fuck">
-    id=pink的div
-</div>
+<!--<div id="pink" class="fuck">-->
+    <!--id=pink的div-->
+<!--</div>-->
 
-<div id="green">
-    id=green的div
-</div>
+<!--<div id="green">-->
+    <!--id=green的div-->
+<!--</div>-->
 
-<div >
-    没有id的div
-</div>
+<!--<div >-->
+    <!--没有id的div-->
+<!--</div>-->
+
+<table>
+    <tr>
+        <td rowspan="13" valign="top" width="150px">
+            <div>
+                <button value=":input" class="b">切换所有的：input</button>
+                <button value=":button" class="b" disabled>切换所有的：button</button>
+                <button value=":radio" class="b">切换所有的：radio</button>
+                <button value=":checkbox" class="b">切换所有的：checkbox</button>
+                <button value=":text" class="b">切换所有的：text</button>
+                <button value=":password" class="b">切换所有的：password</button>
+                <button value=":file" class="b">切换所有的：file</button>
+                <button value=":submit" class="b">切换所有的：submit</button>
+                <button value=":image" class="b">切换所有的：image</button>
+                <button value=":reset" class="b">切换所有的：reset</button>
+            </div>
+        </td>
+        <td width="120px">说明</td>
+        <td width="120px">表单对象</td>
+        <td width="">示例</td>
+    </tr>
+    <tr>
+        <td >input按钮</td>
+        <td >:button</td>
+        <td><input type="button" value="input按钮"/></td>
+    </tr>
+    <tr>
+        <td>button按钮</td>
+        <td >:button</td>
+        <td><button>Button按钮</button></td>
+    </tr>
+    <tr>
+        <td>单选框</td>
+        <td >:radio</td>
+        <td><input type="radio"></td>
+    </tr>
+    <tr>
+        <td>复选框</td>
+        <td >:checkbox</td>
+        <td><input type="checkbox"></td>
+    </tr>
+
+    <tr>
+        <td>文本框</td>
+        <td >:text</td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td>文本域</td>
+        <td></td>
+        <td><textarea></textarea></td>
+    </tr>
+    <tr>
+        <td>密码框</td>
+        <td >:password</td>
+        <td><input type="password" /></td>
+    </tr>
+    <tr>
+        <td>下拉框</td>
+        <td ></td>
+        <td><select><option>Option</option></select></td>
+    </tr>
+
+    <tr>
+        <td>文件上传</td>
+        <td >:file</td>
+        <td> <input type="file" /></td>
+    </tr>
+
+    <tr>
+        <td>提交按钮</td>
+        <td >:submit</td>
+        <td><input type="submit" /></td>
+    </tr>
+    <tr>
+        <td>图片型提交按钮</td>
+        <td >:image</td>
+        <td><input type="image" src="http://how2j.cn/example.gif" /></td>
+    </tr>
+
+    <tr>
+        <td>重置按钮</td>
+        <td >:reset</td>
+        <td><input type="reset" /></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td rowspan="7">
+            <div>
+                <button class="b">切换:enabled</button>
+                <button class="b">切换:disabled</button>
+                <button class="b">切换:checked</button>
+                <button class="b2">:selected数量</button>
+            </div>
+        </td>
+        <td>说明</td>
+        <td>表单对象属性</td>
+        <td>示例</td>
+    </tr>
+    <tr>
+        <td>enabled的按钮</td>
+        <td>:enabled</td>
+        <td><input type="button">enabled的按钮</input></td>
+    </tr>
+    <tr>
+        <td>disabled的按钮</td>
+        <td>:disabled</td>
+        <td><input type="button" disabled>disabled的按钮</input></td>
+    </tr>
+    <tr>
+        <td>选中的复选框</td>
+        <td>:checked</td>
+        <td>
+            <input type="radio" checked><br>
+            <input type="radio"><br>
+            <input type="checkbox"><br>
+            <input type="checkbox" checked>
+        </td>
+    </tr>
+    <tr>
+        <td>选中的下拉框</td>
+        <td>:selected</td>
+        <td>
+            <select size="3" multiple>
+                <option selected>苍老师</option>
+                <option >高树玛利亚</option>
+                <option selected>遥美</option>
+            </select>
+        </td>
+    </tr>
+</table>
 
 </body>
 </html>
